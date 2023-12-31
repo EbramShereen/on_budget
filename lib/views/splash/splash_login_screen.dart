@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:on_budget/views/register/signup_options.dart';
-import 'package:on_budget/widgets/splash/splash_Login.dart';
+import 'package:on_budget/widgets/splash/splash_login.dart';
 
 class SplashLoginScreen extends StatelessWidget {
   const SplashLoginScreen({super.key});

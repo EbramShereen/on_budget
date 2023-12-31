@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:on_budget/assets/colors/colors.dart';
 
+// ignore: must_be_immutable
 class GenderWidget extends StatelessWidget {
   GenderWidget(
       {super.key,

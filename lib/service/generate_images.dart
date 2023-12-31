@@ -1,13 +1,14 @@
-import 'dart:convert';
+// ignore_for_file: avoid_print
+
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:dio/dio.dart';
 
 class ApiHandler {
-  static final String apiUrl =
+  static const String apiUrl =
       "https://api-inference.huggingface.co/models/artificialguybr/TshirtDesignRedmond-V2";
-  static final String apiToken = "YOUR_API_TOKEN";
+  static const String apiToken = "YOUR_API_TOKEN";
 
   static Future<ui.Image> generateImage(String inputText) async {
     try {
