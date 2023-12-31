@@ -3,7 +3,6 @@ import 'package:gap/gap.dart';
 import 'package:on_budget/assets/colors/colors.dart';
 import 'package:on_budget/components/button.dart';
 import 'package:on_budget/components/background.dart';
-import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:on_budget/widgets/register/otp/otp.dart';
 
 class EmailVerfication extends StatelessWidget {

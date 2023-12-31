@@ -1,8 +1,3 @@
-import 'dart:convert';
-import 'dart:typed_data';
-import 'dart:ui' as ui;
-
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:on_budget/assets/colors/colors.dart';
@@ -10,8 +5,6 @@ import 'package:on_budget/components/background.dart';
 import 'package:on_budget/components/bottom_bar.dart';
 import 'package:on_budget/components/button.dart';
 import 'package:on_budget/widgets/generate_images/generate_t-shirt_result.dart';
-
-import '../../service/generate_images.dart';
 
 class GenerateTshirt extends StatefulWidget {
   const GenerateTshirt({Key? key}) : super(key: key);
