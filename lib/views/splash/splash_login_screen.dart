@@ -8,12 +8,14 @@ class SplashLoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SplashLogin(
-      imageUrl: 'lib/assets/splash/welcome_login/welcome_login_register.png',
+      imageUrl: 'lib/assets/splash/welcome_login/welcome.png',
       text1: 'Welcome to On Budget',
       text2: 'Deliver your Order around the world',
       text3: 'without hesitation',
-      tapLogin: () {},
-      tapSignup: () {
+      textBtn1: 'Login',
+      textBtn2: 'SignUp',
+      tapBtn1: () {},
+      tapBtn2: () {
         Navigator.of(context).push(PageRouteBuilder(
           pageBuilder: (context, animation, secondaryAnimation) =>
               const SignupOptions(),

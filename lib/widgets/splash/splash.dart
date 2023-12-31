@@ -28,7 +28,9 @@ class Splash extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 50),
-          child: Image.asset(imageUrl),
+          child: Image.asset(
+            imageUrl,
+          ),
         ),
         Expanded(
           child: Center(

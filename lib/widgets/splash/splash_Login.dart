@@ -1,35 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:on_budget/assets/colors/colors.dart';
+import 'package:on_budget/components/button.dart';
+import 'package:on_budget/views/register/signup_options.dart';
 
 class SplashLogin extends StatelessWidget {
   SplashLogin({
     Key? key,
     required this.imageUrl,
     required this.text1,
-    required this.text2,
-    required this.text3,
-    required this.tapLogin,
-    required this.tapSignup,
+    this.text2,
+    this.text3,
+    required this.tapBtn1,
+    required this.tapBtn2,
+    required this.textBtn1,
+    required this.textBtn2,
+    this.registerText,
+    this.registerBtn,
   }) : super(key: key);
 
   String imageUrl;
   String text1;
-  String text2;
-  String text3;
-  VoidCallback tapLogin;
-  VoidCallback tapSignup;
+  String? text2;
+  String? text3;
+  String textBtn1;
+  String textBtn2;
+  VoidCallback tapBtn1;
+  VoidCallback tapBtn2;
+  String? registerText;
+  VoidCallback? registerBtn;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 130),
-            child: Image.asset(imageUrl),
+          Expanded(
+            flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 130),
+              child: Image.asset(imageUrl),
+            ),
           ),
           Expanded(
+            flex: 1,
             child: Center(
               child: Container(
                 width: double.infinity,
@@ -52,70 +66,51 @@ class SplashLogin extends StatelessWidget {
                       ),
                     ),
                     const Gap(17),
-                    Text(
-                      text2,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                      ),
-                    ),
+                    text2 == null
+                        ? const Text('')
+                        : Text(
+                            text2!,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                            ),
+                          ),
                     const Gap(8),
-                    Text(
-                      text3,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                      ),
-                    ),
+                    text3 == null
+                        ? const Text('')
+                        : Text(
+                            text3!,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                            ),
+                          ),
                     const Gap(30),
-                    ElevatedButton(
-                      onPressed: () {
-                        tapLogin();
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFFFFFFF),
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        enableFeedback: false,
-                        fixedSize: const Size(375, 50),
-                      ),
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
+                    Button(
+                      textSize: 20,
+                      height: 50,
+                      text: 'Login',
+                      tap: () {},
+                      width: 335,
+                      colorBtn: AppColors.secondaryBtn,
+                      colorTxt: AppColors.primaryText,
                     ),
                     const Gap(25),
-                    ElevatedButton(
-                      onPressed: () {
-                        tapSignup();
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFFFFFFF),
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        enableFeedback: false,
-                        fixedSize: const Size(375, 50),
-                      ),
-                      child: Text(
-                        'Sign Up',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
+                    Button(
+                      textSize: 20,
+                      height: 50,
+                      text: 'Sign Up',
+                      tap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignupOptions(),
+                          )),
+                      width: 335,
+                      colorBtn: AppColors.secondaryBtn,
+                      colorTxt: AppColors.primaryText,
                     ),
-                    const Gap(80),
                   ],
                 ),
               ),

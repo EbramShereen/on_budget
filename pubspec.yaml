@@ -37,9 +37,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   gap: ^3.0.1
   flutter_svg: ^2.0.5
-  getwidget: ^2.0.4
-  flutter_social_button: ^1.1.4+1
-  flutter_facebook_login: ^1.1.1
+  device_preview: ^1.1.0
+  flutter_otp_text_field: ^1.1.0+2
+  is_valid: ^0.0.8
+  text_divider: ^1.0.0
+  dot_navigation_bar: ^1.0.2
+  dio: ^5.4.0
+  
 
 dev_dependencies:
   flutter_test:
@@ -72,10 +76,15 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - lib/assets/
+    - lib/assets/register/register_options/
     - lib/assets/splash/splash_one/
     - lib/assets/splash/splash_two/
     - lib/assets/splash/splash_three/
     - lib/assets/splash/welcome_login/
+    - lib/assets/register/signup_by_mail/
+    - lib/assets/register/account_created/
+    - lib/assets/bottom_bar/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
