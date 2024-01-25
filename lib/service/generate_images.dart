@@ -1,34 +1,24 @@
-// ignore_for_file: avoid_print
-
+import 'dart:convert';
 import 'dart:typed_data';
-import 'dart:ui' as ui;
-
 import 'package:dio/dio.dart';
 
-class ApiHandler {
-  static const String apiUrl =
-      "https://api-inference.huggingface.co/models/artificialguybr/TshirtDesignRedmond-V2";
-  static const String apiToken = "YOUR_API_TOKEN";
+const String apiUrl =
+    "https://api-inference.huggingface.co/models/artificialguybr/TshirtDesignRedmond-V2";
+const String authorizationToken = "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";
 
-  static Future<ui.Image> generateImage(String inputText) async {
-    try {
-      final response = await Dio().post(
-        apiUrl,
-        data: {"inputs": inputText},
-        options: Options(
-          headers: {"Authorization": "Bearer $apiToken"},
-          responseType: ResponseType.bytes, // Specify responseType here
-        ),
-      );
+Future<Uint8List> query(Map<String, dynamic> payload) async {
+  try {
+    final dio = Dio();
+    dio.options.headers['Authorization'] = 'Bearer $authorizationToken';
 
-      final imageBytes = response.data as Uint8List;
-      final codec =
-          await ui.instantiateImageCodec(Uint8List.fromList(imageBytes));
-      final frame = await codec.getNextFrame();
-      return frame.image;
-    } catch (e) {
-      print("Error in API call: $e");
-      rethrow;
+    final response = await dio.post(apiUrl, data: jsonEncode(payload));
+
+    if (response.statusCode == 200) {
+      return Uint8List.fromList(response.data);
+    } else {
+      throw Exception('Failed to query the API');
     }
+  } catch (e) {
+    throw Exception('Error: $e');
   }
 }

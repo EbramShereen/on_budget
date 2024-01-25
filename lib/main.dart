@@ -1,9 +1,13 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:on_budget/assets/colors/colors.dart';
+import 'package:on_budget/service/products.dart';
+import 'package:on_budget/views/generate_image/generate_t-shirt.dart';
 import 'package:on_budget/views/home/home.dart';
 
 void main() {
   runApp(const OnBudget());
+  // ProductsApi(Dio());
 }
 
 class OnBudget extends StatelessWidget {
@@ -13,7 +17,7 @@ class OnBudget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Home(),
+      home: const GenerateTshirt(),
       theme: ThemeData(
           fontFamily: 'Roboto',
           appBarTheme: AppBarTheme(

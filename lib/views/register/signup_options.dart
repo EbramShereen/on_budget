@@ -90,11 +90,12 @@ class SignupOptions extends StatelessWidget {
                             ),
                             const Gap(20),
                             SignupWithSocial(
-                                imageurl:
-                                    'lib/assets/register/register_options/google-color-svgrepo-com.svg',
-                                width: 40,
-                                height: 50,
-                                tap: () {}),
+                              imageurl:
+                                  'lib/assets/register/register_options/google-color-svgrepo-com.svg',
+                              width: 40,
+                              height: 50,
+                              tap: () {},
+                            ),
                             const Gap(20),
                             SignupWithSocial(
                               imageurl:
