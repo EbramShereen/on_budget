@@ -1,12 +1,9 @@
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:on_budget/assets/colors/colors.dart';
 import 'package:on_budget/components/background.dart';
 import 'package:on_budget/components/bottom_bar.dart';
 import 'package:on_budget/components/button.dart';
-import 'package:on_budget/service/generate_images.dart';
 import 'package:on_budget/widgets/generate_images/generate_t-shirt_result.dart';
 
 class GenerateTshirt extends StatefulWidget {
