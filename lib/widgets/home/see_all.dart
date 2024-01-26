@@ -5,36 +5,42 @@ import 'package:on_budget/assets/colors/colors.dart';
 class SeeAll extends StatelessWidget {
   const SeeAll({
     super.key,
+    required this.text,
   });
-
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         const Gap(20),
-        Text(
-          'Recommendation items',
-          style: TextStyle(
-            color: AppColors.baseTxt,
-            fontSize: 18,
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.w700,
-            height: 0,
+        SizedBox(
+          width: 190,
+          child: Text(
+            text,
+            style: TextStyle(
+              color: AppColors.baseTxt,
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+            ),
           ),
         ),
         const Gap(120),
-        GestureDetector(
-          onTap: () {},
-          child: const Text(
-            'See All +',
-            style: TextStyle(
-              color: Color(0xFF8A8D9F),
-              fontSize: 16,
-              fontFamily: 'Roboto',
-              fontWeight: FontWeight.w700,
-              height: 0,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            GestureDetector(
+              onTap: () {},
+              child: const Text(
+                textAlign: TextAlign.end,
+                'See All +',
+                style: TextStyle(
+                  color: Color(0xFF8A8D9F),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
             ),
-          ),
+          ],
         ),
       ],
     );

@@ -18,4 +18,15 @@ class AppColors {
   static Color primaryBtn = const Color(0xFF006880);
   static Color secondaryBtn = const Color(0xFFF4F5F7);
   static Color bottomBar = const Color(0xFFFFFFFF);
+  static Color homeSecondary = const Color(0xFFd6d9da);
+
+  //bottom bar
+  static Color homeBarIconBackground = const Color(0xFFDFD7F3);
+  static Color homeTextBarIcon = const Color(0xFF5B37B7);
+  static Color likesBarIconBackground = const Color(0xFFF6D6EE);
+  static Color likesTextBarIcon = const Color(0xFFC9379D);
+  static Color searchBarIconBackground = const Color(0xFFFBEFD3);
+  static Color searchTextBarIcon = const Color(0xFFE6A919);
+  static Color profileBarIconBackground = const Color(0xFFD1EBEF);
+  static Color profileTextBarIcon = const Color(0xFF1194AA);
 }

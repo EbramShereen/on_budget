@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:on_budget/assets/colors/colors.dart';
 
 class CategoryHome extends StatelessWidget {
@@ -7,7 +6,7 @@ class CategoryHome extends StatelessWidget {
     super.key,
     required this.image,
     required this.textLineOne,
-    this.textLineTwo,
+    required this.textLineTwo,
     required this.tap,
   });
   final String image;
@@ -38,12 +37,10 @@ class CategoryHome extends StatelessWidget {
             textLineOne,
             style: const TextStyle(fontSize: 15),
           ),
-          visibility == true
-              ? Text(
-                  textLineTwo!,
-                  style: const TextStyle(fontSize: 15),
-                )
-              : const Text(''),
+          Text(
+            textLineTwo!,
+            style: const TextStyle(fontSize: 15),
+          )
         ],
       ),
     );
