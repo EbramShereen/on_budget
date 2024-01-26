@@ -29,8 +29,8 @@ class CategoryHome extends StatelessWidget {
       margin: const EdgeInsets.only(left: 10, right: 10),
       child: Column(
         children: [
-          const Image(
-            image: AssetImage('lib/assets/home/print_t-shirt.png'),
+          Image(
+            image: AssetImage(image),
             width: 100,
             height: 100,
           ),

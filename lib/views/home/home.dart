@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:on_budget/assets/colors/colors.dart';
 import 'package:on_budget/components/home_background.dart';
 import 'package:on_budget/widgets/home/category_home.dart';
+import 'package:on_budget/widgets/home/recomended_items.dart';
 import 'package:on_budget/widgets/home/see_all.dart';
 
 class Home extends StatelessWidget {
@@ -30,7 +31,7 @@ class Home extends StatelessWidget {
       tap: () {},
     ),
     CategoryHome(
-      image: 'lib/assets/home/Underwear.png',
+      image: 'lib/assets/home/underwear.png',
       textLineOne: 'UnderWear',
       tap: () {},
     ),
@@ -65,7 +66,7 @@ class Home extends StatelessWidget {
               ),
             ),
             const SeeAll(),
-            Container()
+            RecomendedItems()
           ],
         ),
       ),
