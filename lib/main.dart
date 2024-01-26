@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:on_budget/assets/colors/colors.dart';
 import 'package:on_budget/views/generate_image/generate_t-shirt.dart';
+import 'package:on_budget/views/home/home.dart';
 
 void main() {
   runApp(const OnBudget());
@@ -14,7 +15,7 @@ class OnBudget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const GenerateTshirt(),
+      home: Home(),
       theme: ThemeData(
           fontFamily: 'Roboto',
           appBarTheme: AppBarTheme(

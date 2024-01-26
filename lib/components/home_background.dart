@@ -66,7 +66,7 @@ class HomeBackground extends StatelessWidget {
                 width: double.infinity,
                 height: double.infinity,
                 decoration: const BoxDecoration(
-                    color: Color(0xFFF9F9FF),
+                    color: Color(0xFFd6d9da),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30),

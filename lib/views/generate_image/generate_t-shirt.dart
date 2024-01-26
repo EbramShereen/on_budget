@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:on_budget/assets/colors/colors.dart';
 import 'package:on_budget/components/background.dart';
-import 'package:on_budget/components/bottom_bar.dart';
 import 'package:on_budget/components/button.dart';
 import 'package:on_budget/widgets/generate_images/generate_t-shirt_result.dart';
 
@@ -15,7 +14,6 @@ class GenerateTshirt extends StatefulWidget {
 
 class _GenerateTshirtState extends State<GenerateTshirt> {
   bool visible = false;
-  final TextEditingController _textFieldController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,14 +36,13 @@ class _GenerateTshirtState extends State<GenerateTshirt> {
               ),
             ),
             const Gap(27),
-            SizedBox(
+            const SizedBox(
               width: 250,
               height: 50,
               child: TextField(
-                controller: _textFieldController,
                 enableSuggestions: true,
                 textAlign: TextAlign.center,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Imagination Start Here',
                   hintStyle: TextStyle(color: Colors.grey),
@@ -85,7 +82,6 @@ class _GenerateTshirtState extends State<GenerateTshirt> {
                 ),
               ],
             ),
-            const Gap(23),
             visible
                 ? const Visibility(
                     visible: true,
@@ -98,7 +94,6 @@ class _GenerateTshirtState extends State<GenerateTshirt> {
           ],
         ),
       ),
-      bottomNavigationBar: const BottomBar(),
     );
   }
 }
