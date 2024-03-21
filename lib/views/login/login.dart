@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/assets/colors/colors.dart';
-import 'package:on_budget/components/mini_background.dart';
 
-class Login extends StatelessWidget {
+import 'package:on_budget/components/button.dart';
+import 'package:on_budget/components/mini_background.dart';
+import 'package:on_budget/helper/constants.dart';
+import 'package:on_budget/views/home/home.dart';
+import 'package:on_budget/widgets/login/login_text_field.dart';
+
+class Login extends StatefulWidget {
   const Login({super.key});
+  static String id = 'LoginScreen';
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  bool valueCheckbox = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +32,10 @@ class Login extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Gap(135),
-                Text(
+                const Text(
                   'Welcome Back!',
                   style: TextStyle(
-                    color: AppColors.primaryColor,
+                    color: kPrimaryColor,
                     fontSize: 22,
                     fontWeight: FontWeight.w700,
                   ),
@@ -37,29 +49,76 @@ class Login extends StatelessWidget {
                 ),
                 const Gap(25),
                 Container(
-                  width: 335,
-                  height: 284,
-                  color: Colors.white,
+                  decoration: const BoxDecoration(
+                    color: kSecondaryColor,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                  ),
+                  width: 350,
+                  height: 340,
                   child: Column(
                     children: [
-                      TextFormField(
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 20, right: 20, top: 30, bottom: 15),
+                        child: LoginTextField(
+                          hint: 'Enter Your Email',
+                          icon: const Icon(
+                            Icons.mail_outline,
+                            color: kPrimaryColor,
                           ),
-                          labelText: 'Email',
                         ),
-                        keyboardType: TextInputType.emailAddress,
                       ),
-                      TextFormField(
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        child: LoginTextField(
+                          hint: 'Enter Your Password',
+                          icon: const Icon(
+                            Icons.lock_outlined,
+                            color: kPrimaryColor,
                           ),
-                          labelText: 'Password',
                         ),
-                        keyboardType: TextInputType.visiblePassword,
                       ),
+                      const Gap(15),
+                      Row(
+                        children: [
+                          Checkbox(
+                            value: valueCheckbox,
+                            activeColor: (kPrimaryColor),
+                            onChanged: (value) {
+                              setState(() {
+                                valueCheckbox = value!;
+                              });
+                            },
+                          ),
+                          const Text(
+                            'Remember me',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          const Gap(15),
+                          const Text(
+                            'Forget password ?',
+                            style: TextStyle(
+                                fontSize: 16, color: Color(0xFF340CB9)),
+                          )
+                        ],
+                      ),
+                      const Gap(20),
+                      Button(
+                        width: 250,
+                        height: 50,
+                        colorBtn: kPrimaryColor,
+                        tap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Home(),
+                          ),
+                        ),
+                        colorTxt: kSecondaryColor,
+                        text: 'Sign In',
+                        textSize: 16,
+                      )
                     ],
                   ),
                 )

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:on_budget/assets/colors/colors.dart';
+
+import 'package:on_budget/helper/constants.dart';
 
 class HomeBackground extends StatelessWidget {
   HomeBackground({super.key, required this.child});
@@ -9,32 +10,32 @@ class HomeBackground extends StatelessWidget {
     return Container(
         width: double.infinity,
         height: double.infinity,
-        color: AppColors.primaryColor,
+        color: kPrimaryColor,
         child: Stack(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 50, left: 15),
+            const Padding(
+              padding: EdgeInsets.only(top: 50, left: 15),
               child: Text(
                 'HI Ebram Shereen',
                 style: TextStyle(
-                    color: AppColors.secondaryText,
+                    color: kSecondaryColor,
                     fontSize: 18,
                     fontWeight: FontWeight.w500),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 80, left: 15),
+            const Padding(
+              padding: EdgeInsets.only(top: 80, left: 15),
               child: Text(
                 'Good Morning',
                 style: TextStyle(
-                    color: AppColors.secondaryText,
+                    color: kSecondaryColor,
                     fontSize: 18,
                     fontWeight: FontWeight.w500),
               ),
             ),
             Positioned(
               height: 130,
-              width: 690,
+              width: 700,
               child: IconButton(
                   onPressed: () {},
                   icon: const Icon(
@@ -43,8 +44,8 @@ class HomeBackground extends StatelessWidget {
                   )),
             ),
             const Positioned(
-              width: 700,
-              top: 56,
+              width: 708,
+              top: 57,
               child: CircleAvatar(
                 backgroundColor: Colors.red,
                 radius: 3,
@@ -52,7 +53,7 @@ class HomeBackground extends StatelessWidget {
             ),
             Positioned(
               height: 130,
-              width: 760,
+              width: 765,
               child: IconButton(
                   onPressed: () {},
                   icon: const Icon(

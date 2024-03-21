@@ -17,7 +17,7 @@ class SignupWithSocial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: tap,
+      onTap: () {},
       child: Container(
         decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -25,7 +25,7 @@ class SignupWithSocial extends StatelessWidget {
               color: Colors.grey,
             )),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: SvgPicture.asset(
             imageurl,
             width: width,

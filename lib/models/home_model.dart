@@ -16,8 +16,7 @@ class HomeModel {
 }
 
 class Rating {
-  final double rate;
-  final double count;
-
-  Rate({required this.rate, required this.count});
+  double rate;
+  double count;
+  Rating({required this.rate, required this.count});
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:on_budget/assets/colors/colors.dart';
+
+import 'package:on_budget/helper/constants.dart';
 
 // ignore: must_be_immutable
 class GenderWidget extends StatelessWidget {
@@ -16,7 +17,7 @@ class GenderWidget extends StatelessWidget {
     return isSelect == true
         ? CircleAvatar(
             radius: 54,
-            backgroundColor: AppColors.primaryColor,
+            backgroundColor: kPrimaryColor,
             child: GestureDetector(
               onTap: tap,
               child: CircleAvatar(

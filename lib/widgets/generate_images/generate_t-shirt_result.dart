@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/assets/colors/colors.dart';
-import 'package:on_budget/components/button.dart';
 
-class GenerateTshirtResault extends StatelessWidget {
-  const GenerateTshirtResault({
+import 'package:on_budget/components/button.dart';
+import 'package:on_budget/helper/constants.dart';
+
+class GenerateTshirtResult extends StatelessWidget {
+  const GenerateTshirtResult({
     super.key,
   });
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,25 +34,23 @@ class GenerateTshirtResault extends StatelessWidget {
                 text: 'Add To Cart',
                 tap: () {},
                 width: 105,
-                colorBtn: AppColors.primaryBtn,
-                colorTxt: AppColors.secondaryText,
+                colorBtn: kPrimaryColor,
+                colorTxt: kSecondaryColor,
                 height: 33,
               ),
               const Gap(31),
               Button(
-                textSize: 15,
-                text: 'Regenerate',
-                tap: () {},
-                width: 105,
-                colorBtn: AppColors.primaryBtn,
-                colorTxt: AppColors.secondaryText,
-                height: 33,
-              ),
+                  textSize: 15,
+                  text: 'Regenerate',
+                  tap: () {},
+                  width: 105,
+                  colorBtn: kPrimaryColor,
+                  colorTxt: kSecondaryColor,
+                  height: 33),
             ],
           ),
         ),
       ],
     );
-    //const Gap(2),
   }
 }

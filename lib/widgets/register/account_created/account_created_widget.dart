@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/assets/colors/colors.dart';
+
 import 'package:on_budget/components/button.dart';
+import 'package:on_budget/helper/constants.dart';
 
 class AccountCreatedWidget extends StatelessWidget {
-  const AccountCreatedWidget({
-    super.key,
-  });
+  const AccountCreatedWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 335,
       height: 291,
-      decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(10))),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: Column(
         children: [
           const Gap(44),
@@ -28,7 +28,7 @@ class AccountCreatedWidget extends StatelessWidget {
           ),
           const Gap(20),
           const Text(
-            'Your account had beed created',
+            'Your account has been created',
             style: TextStyle(
               color: Color(0xFF8A8D9F),
               fontSize: 16,
@@ -46,13 +46,13 @@ class AccountCreatedWidget extends StatelessWidget {
           const Gap(37),
           Button(
             height: 50,
-            colorTxt: AppColors.secondaryText,
+            colorTxt: kSecondaryColor,
             text: 'Welcome to onBudget',
             tap: () {},
             width: 295,
-            colorBtn: AppColors.primaryBtn,
+            colorBtn: kPrimaryColor,
             textSize: 20,
-          )
+          ),
         ],
       ),
     );

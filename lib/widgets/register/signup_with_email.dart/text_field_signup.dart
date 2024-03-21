@@ -6,14 +6,13 @@ class TextFieldSignup extends StatelessWidget {
     Key? key,
     required this.labelText,
     required this.keyboardType,
-    required this.onChanged,
-    required this.errorText,
+    required this.validate,
     this.obscure = false,
   }) : super(key: key);
 
   final String labelText;
   final TextInputType keyboardType;
-  void Function(String)? onChanged;
+  String? Function(String?) validate;
   String? errorText;
   bool obscure;
 
@@ -27,11 +26,10 @@ class TextFieldSignup extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(30)),
           ),
           labelText: labelText,
-          errorText: errorText,
         ),
         obscureText: obscure,
         keyboardType: keyboardType,
-        onChanged: onChanged,
+        validator: validate,
       ),
     );
   }

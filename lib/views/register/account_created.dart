@@ -4,7 +4,7 @@ import 'package:on_budget/widgets/register/account_created/account_created_widge
 
 class AccountCreated extends StatelessWidget {
   const AccountCreated({super.key});
-
+  static String id = 'AccountCreated';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

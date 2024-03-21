@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/assets/colors/colors.dart';
+
 import 'package:on_budget/components/background.dart';
 import 'package:on_budget/components/button.dart';
+import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/widgets/generate_images/generate_t-shirt_result.dart';
 
 class GenerateTshirt extends StatefulWidget {
   const GenerateTshirt({Key? key}) : super(key: key);
-
+  static String id = 'GenerateT-shirt';
   @override
   State<GenerateTshirt> createState() => _GenerateTshirtState();
 }
@@ -19,9 +20,12 @@ class _GenerateTshirtState extends State<GenerateTshirt> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Make your own T-shirt'),
-        leading: const Icon(Icons.arrow_back_ios),
-      ),
+          title: const Text('Make your own T-shirt'),
+          leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back_ios),
+            color: Colors.white,
+          )),
       body: Background(
         child: Column(
           children: [
@@ -54,42 +58,40 @@ class _GenerateTshirtState extends State<GenerateTshirt> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Button(
-                  textSize: 15,
-                  text: 'Surprise Me',
-                  tap: () {
-                    setState(() {
-                      visible = !visible;
-                    });
-                  },
-                  width: 105,
-                  colorBtn: const Color(0xCC3D54DA),
-                  colorTxt: AppColors.secondaryText,
-                  height: 33,
-                ),
+                    textSize: 15,
+                    text: 'Surprise Me',
+                    tap: () {
+                      setState(() {
+                        visible = !visible;
+                      });
+                    },
+                    width: 105,
+                    colorBtn: const Color(0xCC3D54DA),
+                    colorTxt: kSecondaryColor,
+                    height: 33),
                 const Gap(31),
                 Button(
-                  textSize: 15,
-                  text: 'Submit',
-                  tap: () {
-                    setState(() {
-                      visible = !visible;
-                    });
-                  },
-                  width: 105,
-                  colorBtn: AppColors.primaryBtn,
-                  colorTxt: AppColors.secondaryText,
-                  height: 33,
-                ),
+                    textSize: 15,
+                    text: 'Submit',
+                    tap: () {
+                      setState(() {
+                        visible = !visible;
+                      });
+                    },
+                    width: 105,
+                    colorBtn: kPrimaryColor,
+                    colorTxt: kSecondaryColor,
+                    height: 33),
               ],
             ),
             visible
                 ? const Visibility(
                     visible: true,
-                    child: GenerateTshirtResault(),
+                    child: GenerateTshirtResult(),
                   )
                 : const Visibility(
                     visible: false,
-                    child: GenerateTshirtResault(),
+                    child: GenerateTshirtResult(),
                   )
           ],
         ),

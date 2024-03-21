@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:on_budget/assets/colors/colors.dart';
+
+import 'package:on_budget/helper/constants.dart';
 
 class ConfirmPolicy extends StatefulWidget {
-  const ConfirmPolicy({super.key});
+  const ConfirmPolicy({Key? key}) : super(key: key);
 
   @override
   State<ConfirmPolicy> createState() => _ConfirmPolicyState();
@@ -22,7 +23,7 @@ class _ConfirmPolicyState extends State<ConfirmPolicy> {
               checkBox ? checkBox = false : checkBox = true;
             });
           },
-          activeColor: AppColors.primaryColor,
+          activeColor: kPrimaryColor,
         ),
         const Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +43,7 @@ class _ConfirmPolicyState extends State<ConfirmPolicy> {
               ),
             ),
           ],
-        )
+        ),
       ],
     );
   }

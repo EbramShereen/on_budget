@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:on_budget/widgets/register/signup_with_email.dart/text_field_signup.dart';
 
 class SignupTextField extends StatefulWidget {
@@ -25,77 +26,102 @@ class _SignupTextFieldState extends State<SignupTextField> {
     return Column(
       children: [
         TextFieldSignup(
-            labelText: 'Full Name',
-            keyboardType: TextInputType.name,
-            onChanged: (value) {
-              setState(() {
-                if (value.isEmpty || value.contains(regexForNumbers)) {
-                  errorText =
-                      'Full name cannot contain numbers or special characters.';
-                } else {
-                  errorText = '';
+          labelText: 'Full Name',
+          keyboardType: TextInputType.name,
+          validate: (value) {
+            setState(
+              () {
+                if (value!.isNotEmpty) {
+                  if (value.contains(regexForCapitalChar)) {
+                    errorText =
+                        'Full name cannot contain numbers or special characters.';
+                  }
+                } else if (value.isEmpty) {
+                  errorText = 'You don\'t write your Full Name';
                 }
-              });
-            },
-            errorText: errorText!.isEmpty ? null : errorText),
+              },
+            );
+            return null;
+          },
+        ),
         TextFieldSignup(
           labelText: 'Phone Number',
           keyboardType: TextInputType.phone,
-          onChanged: (value) {
-            if (value.isEmpty || !value.contains(regexForCharAndSymbol)) {
-              errorText =
-                  'Phone number must contain at least one character or special character';
-            } else {
-              errorText = '';
-            }
+          validate: (value) {
+            setState(
+              () {
+                if (value!.isNotEmpty) {
+                  if (value.contains(regexForNumbers)) {
+                    errorText =
+                        'Full name cannot contain numbers or special characters.';
+                  }
+                } else if (value.isEmpty) {
+                  errorText = 'You don\'t write your Full Name';
+                }
+              },
+            );
+            return null;
           },
-          errorText: errorText!.isEmpty ? null : errorText,
         ),
         TextFieldSignup(
           labelText: 'Email',
           keyboardType: TextInputType.emailAddress,
-          onChanged: (value) {
-            if (value.isEmpty ||
-                value.contains(regexForSymbolAtAndDot) ||
-                !value.contains(regexForCharAndSymbolForEmail)) {
-              errorText =
-                  'Email must contain at least one character or special character.';
-            } else {
-              errorText = '';
-            }
+          validate: (value) {
+            setState(
+              () {
+                if (value!.isNotEmpty) {
+                  if (value.contains(regexForNumbers)) {
+                    errorText =
+                        'Full name cannot contain numbers or special characters.';
+                  }
+                } else if (value.isEmpty) {
+                  errorText = 'You don\'t write your Full Name';
+                }
+              },
+            );
+            return null;
           },
-          errorText: errorText!.isEmpty ? null : errorText,
         ),
         TextFieldSignup(
           labelText: 'Password',
           keyboardType: TextInputType.visiblePassword,
-          onChanged: (value) {
-            if (value.isEmpty ||
-                value.length < 8 ||
-                !value.contains(regexForSmallChar) ||
-                !value.contains(regexForCapitalChar)) {
-              errorText =
-                  'Password must have at least 1 capital letter, 1 small letter, 1 number, and 1 special character. ';
-              password = value;
-            } else {
-              errorText = '';
-            }
+          validate: (value) {
+            setState(
+              () {
+                if (value!.isNotEmpty) {
+                  if (value.contains(regexForNumbers)) {
+                    errorText =
+                        'Full name cannot contain numbers or special characters.';
+                  }
+                } else if (value.isEmpty) {
+                  errorText = 'You don\'t write your Full Name';
+                }
+              },
+            );
+            return null;
           },
-          errorText: errorText!.isEmpty ? null : errorText,
           obscure: true,
         ),
         TextFieldSignup(
-            labelText: 'Confirm Password',
-            keyboardType: TextInputType.visiblePassword,
-            obscure: true,
-            onChanged: (value) {
-              checkPassword = value;
-              checkPassword != password
-                  ? errorText =
-                      'Passwords do not match. Please re-enter your password'
-                  : errorText = '';
-            },
-            errorText: errorText!.isEmpty ? null : errorText),
+          labelText: 'Confirm Password',
+          keyboardType: TextInputType.visiblePassword,
+          obscure: true,
+          validate: (value) {
+            setState(
+              () {
+                if (value!.isNotEmpty) {
+                  if (value.contains(regexForNumbers)) {
+                    errorText =
+                        'Full name cannot contain numbers or special characters.';
+                  }
+                } else if (value.isEmpty) {
+                  errorText = 'You don\'t write your Full Name';
+                }
+              },
+            );
+            return null;
+          },
+        ),
       ],
     );
   }

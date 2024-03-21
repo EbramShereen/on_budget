@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
-import 'package:on_budget/assets/colors/colors.dart';
+
+import 'package:on_budget/helper/constants.dart';
 
 class Otp extends StatelessWidget {
   const Otp({
@@ -10,10 +11,9 @@ class Otp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OtpTextField(
-      numberOfFields: 4,
-      showFieldAsBox: true,
-      focusedBorderColor: AppColors.primaryText,
-      fieldWidth: 50,
-    );
+        numberOfFields: 4,
+        showFieldAsBox: true,
+        focusedBorderColor: kPrimaryColor,
+        fieldWidth: 50);
   }
 }
