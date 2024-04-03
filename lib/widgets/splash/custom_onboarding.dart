@@ -24,37 +24,41 @@ class CustomOnBoarding extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       alignment: Alignment.center,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const SizedBox(
-            height: 480,
-          ),
-          Text(
-            textOne ?? '',
-            style: TextStyle(
-              fontSize: textOneSize ?? 20,
-              fontFamily: 'Merienda',
+      child: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .5,
             ),
-          ),
-          const Gap(5),
-          Text(
-            textTwo ?? '',
-            style: TextStyle(
-              fontSize: textTwoSize ?? 20,
-              fontFamily: 'Merienda',
+            Text(
+              textOne ?? '',
+              style: TextStyle(
+                fontSize:
+                    textOneSize ?? MediaQuery.of(context).size.width * .06,
+                fontFamily: 'Merienda',
+              ),
             ),
-          ),
-          const Gap(5),
-          Text(
-            textThree ?? '',
-            style: TextStyle(
-              fontSize: textThreeSize ?? 20,
-              fontFamily: 'Merienda',
+            const Gap(5),
+            Text(
+              textTwo ?? '',
+              style: TextStyle(
+                fontSize:
+                    textTwoSize ?? MediaQuery.of(context).size.width * .06,
+                fontFamily: 'Merienda',
+              ),
             ),
-          )
-        ],
+            const Gap(5),
+            Text(
+              textThree ?? '',
+              style: TextStyle(
+                fontSize:
+                    textThreeSize ?? MediaQuery.of(context).size.width * .06,
+                fontFamily: 'Merienda',
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

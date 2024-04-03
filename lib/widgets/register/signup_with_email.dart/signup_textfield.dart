@@ -25,7 +25,7 @@ class _SignupTextFieldState extends State<SignupTextField> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TextFieldSignup(
+        TextFieldWidget(
           labelText: 'Full Name',
           keyboardType: TextInputType.name,
           validate: (value) {
@@ -44,7 +44,7 @@ class _SignupTextFieldState extends State<SignupTextField> {
             return null;
           },
         ),
-        TextFieldSignup(
+        TextFieldWidget(
           labelText: 'Phone Number',
           keyboardType: TextInputType.phone,
           validate: (value) {
@@ -63,7 +63,7 @@ class _SignupTextFieldState extends State<SignupTextField> {
             return null;
           },
         ),
-        TextFieldSignup(
+        TextFieldWidget(
           labelText: 'Email',
           keyboardType: TextInputType.emailAddress,
           validate: (value) {
@@ -82,7 +82,7 @@ class _SignupTextFieldState extends State<SignupTextField> {
             return null;
           },
         ),
-        TextFieldSignup(
+        TextFieldWidget(
           labelText: 'Password',
           keyboardType: TextInputType.visiblePassword,
           validate: (value) {
@@ -102,7 +102,7 @@ class _SignupTextFieldState extends State<SignupTextField> {
           },
           obscure: true,
         ),
-        TextFieldSignup(
+        TextFieldWidget(
           labelText: 'Confirm Password',
           keyboardType: TextInputType.visiblePassword,
           obscure: true,

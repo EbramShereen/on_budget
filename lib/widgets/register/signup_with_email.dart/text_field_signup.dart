@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class TextFieldSignup extends StatelessWidget {
-  TextFieldSignup({
+class TextFieldWidget extends StatelessWidget {
+  TextFieldWidget({
     Key? key,
     required this.labelText,
     required this.keyboardType,

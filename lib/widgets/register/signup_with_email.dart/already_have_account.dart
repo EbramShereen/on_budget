@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import 'package:on_budget/helper/constants.dart';
-import 'package:on_budget/views/login/login.dart';
+import 'package:on_budget/views/register/login/login.dart';
 
 class AlreadyHaveAccount extends StatelessWidget {
   const AlreadyHaveAccount({

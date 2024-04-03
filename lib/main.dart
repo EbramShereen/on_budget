@@ -1,18 +1,24 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/views/generate_image/generate_t-shirt.dart';
 import 'package:on_budget/views/home/home.dart';
-import 'package:on_budget/views/login/login.dart';
-import 'package:on_budget/views/register/account_created.dart';
-import 'package:on_budget/views/register/email_verification.dart';
-import 'package:on_budget/views/register/signup_options.dart';
-import 'package:on_budget/views/register/signup_with_email.dart';
+import 'package:on_budget/views/register/login/login.dart';
+import 'package:on_budget/views/register/sign_up/account_created.dart';
+import 'package:on_budget/views/register/sign_up/email_verification.dart';
+import 'package:on_budget/views/register/login/forget_password.dart';
+import 'package:on_budget/views/register/sign_up/signup_options.dart';
+import 'package:on_budget/views/register/sign_up/signup_with_email.dart';
 import 'package:on_budget/views/splash/on_boarding.dart';
+import 'package:on_budget/views/splash/on_boarding_language.dart';
 
 void main() {
-  runApp(const OnBudget());
-  // ProductsApi(Dio());
+  runApp(
+    DevicePreview(
+      builder: (context) => const OnBudget(),
+    ),
+  );
 }
 
 class OnBudget extends StatelessWidget {
@@ -23,13 +29,19 @@ class OnBudget extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          fontFamily: 'Roboto',
-          appBarTheme: const AppBarTheme(
-              centerTitle: true,
-              titleTextStyle: TextStyle(fontSize: 22),
-              elevation: 0,
-              backgroundColor: kPrimaryColor,
-              iconTheme: IconThemeData(color: Colors.white))),
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        // fontFamily: GoogleFonts.playfairDisplay().fontFamily,
+        appBarTheme: const AppBarTheme(
+          actionsIconTheme: IconThemeData(),
+          centerTitle: true,
+          titleTextStyle: TextStyle(fontSize: 22),
+          elevation: 0,
+          backgroundColor: kPrimaryColor,
+          iconTheme: IconThemeData(color: Colors.white),
+        ),
+      ),
       routes: {
         Home.id: (context) => const Home(),
         GenerateTshirt.id: (context) => const GenerateTshirt(),
@@ -39,8 +51,10 @@ class OnBudget extends StatelessWidget {
         SignupOptions.id: (context) => const SignupOptions(),
         SignUpWithEmail.id: (context) => const SignUpWithEmail(),
         OnBoardingScreens.id: (context) => const OnBoardingScreens(),
+        ForgetPassword.id: (context) => const ForgetPassword(),
+        OnBoardingLanguage.id: (context) => const OnBoardingLanguage(),
       },
-      initialRoute: OnBoardingScreens.id,
+      initialRoute: OnBoardingLanguage.id,
     );
   }
 }

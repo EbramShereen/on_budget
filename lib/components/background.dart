@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:on_budget/helper/constants.dart';
+import 'package:on_budget/helper/media_query.dart';
 
 class Background extends StatelessWidget {
   const Background({super.key, required this.child});
@@ -11,23 +13,25 @@ class Background extends StatelessWidget {
       width: double.infinity,
       height: double.infinity,
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
+
+            //curve in after AppBar
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+                topLeft:
+                    Radius.circular(MediaQuerySizes.getWidth(context) * .1),
+                topRight:
+                    Radius.circular(MediaQuerySizes.getWidth(context) * .1)),
             color: kThirdColor),
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: EdgeInsets.all(MediaQuerySizes.getWidth(context) * .01),
           child: Container(
             decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30),
-                topRight: Radius.circular(30),
-                bottomRight: Radius.circular(30),
-                bottomLeft: Radius.circular(30),
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
               ),
             ),
-            width: 500,
-            height: 700,
+            width: MediaQuerySizes.getWidth(context) * .2,
+            height: MediaQuerySizes.getHeight(context) * .2,
             child: child,
           ),
         ),

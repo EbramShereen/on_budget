@@ -4,8 +4,9 @@ import 'package:on_budget/components/background.dart';
 
 import 'package:on_budget/components/button.dart';
 import 'package:on_budget/helper/constants.dart';
-import 'package:on_budget/views/login/login.dart';
-import 'package:on_budget/views/register/signup_with_email.dart';
+import 'package:on_budget/helper/media_query.dart';
+import 'package:on_budget/views/register/login/login.dart';
+import 'package:on_budget/views/register/sign_up/signup_with_email.dart';
 import 'package:on_budget/widgets/register/signup_options/signup_social_icons.dart';
 import 'package:text_divider/text_divider.dart';
 
@@ -21,44 +22,44 @@ class SignupOptions extends StatelessWidget {
         ),
         body: Background(
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(MediaQuerySizes.getWidth(context) * .05),
             child: Container(
-              decoration: const BoxDecoration(
-                color: Color(0xffffffff),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
-                  bottomLeft: Radius.circular(30),
-                ),
+              decoration: BoxDecoration(
+                color: const Color(0xffffffff),
+                borderRadius: BorderRadius.all(
+                    Radius.circular(MediaQuerySizes.getWidth(context) * .1)),
               ),
-              width: 500,
-              height: 700,
               child: Column(
                 children: [
-                  const Gap(150),
-                  const Text(
+                  Gap(MediaQuerySizes.getHeight(context) * .1),
+                  Text(
                     'Please select a preferred',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                    style: TextStyle(
+                        fontSize: MediaQuerySizes.getWidth(context) * .06,
+                        fontWeight: FontWeight.w400),
                   ),
-                  const Text(
+                  Text(
                     'option of your choice. ',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                    style: TextStyle(
+                        fontSize: MediaQuerySizes.getWidth(context) * .06,
+                        fontWeight: FontWeight.w400),
                   ),
-                  const Gap(20),
+                  Gap(
+                    MediaQuerySizes.getHeight(context) * .03,
+                  ),
                   Button(
                       colorTxt: kSecondaryColor,
                       colorBtn: kPrimaryColor,
-                      width: 85,
-                      height: 40,
-                      textSize: 20,
+                      width: MediaQuerySizes.getWidth(context) * .25,
+                      height: MediaQuerySizes.getHeight(context) * .06,
+                      textSize: MediaQuerySizes.getWidth(context) * .055,
                       text: 'Email',
                       tap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const SignUpWithEmail(),
                           ))),
-                  const Gap(30),
+                  Gap(MediaQuerySizes.getHeight(context) * .06),
                   Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: TextDivider.horizontal(
@@ -68,30 +69,29 @@ class SignupOptions extends StatelessWidget {
                         ),
                         thickness: .9,
                       )),
-                  const Gap(40),
+                  Gap(MediaQuerySizes.getHeight(context) * .06),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SignupWithSocial(
-                        imageurl:
-                            'lib/assets/register/register_options/facebook-1-svgrepo-com.svg',
-                        width: 40,
-                        height: 40,
+                        imageurl: kFacebookIcon,
+                        width: MediaQuerySizes.getWidth(context) * .2,
+                        height: MediaQuerySizes.getHeight(context) * .05,
                         tap: () {},
                       ),
                       const Gap(20),
                       SignupWithSocial(
                         imageurl:
                             'lib/assets/register/register_options/google-color-svgrepo-com.svg',
-                        width: 40,
-                        height: 40,
+                        width: MediaQuerySizes.getWidth(context) * .2,
+                        height: MediaQuerySizes.getHeight(context) * .05,
                         tap: () {},
                       ),
                       const Gap(20),
                       SignupWithSocial(
                         imageurl: 'lib/assets/register/register_options/x.svg',
-                        width: 40,
-                        height: 40,
+                        width: MediaQuerySizes.getWidth(context) * .2,
+                        height: MediaQuerySizes.getHeight(context) * .05,
                         tap: () {},
                       ),
                     ],

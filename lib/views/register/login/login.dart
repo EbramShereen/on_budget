@@ -5,6 +5,7 @@ import 'package:on_budget/components/button.dart';
 import 'package:on_budget/components/mini_background.dart';
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/views/home/home.dart';
+import 'package:on_budget/views/register/login/forget_password.dart';
 import 'package:on_budget/widgets/login/login_text_field.dart';
 
 class Login extends StatefulWidget {
@@ -97,10 +98,11 @@ class _LoginState extends State<Login> {
                             style: TextStyle(fontSize: 16),
                           ),
                           const Gap(15),
-                          const Text(
-                            'Forget password ?',
-                            style: TextStyle(
-                                fontSize: 16, color: Color(0xFF340CB9)),
+                          TextButton(
+                            onPressed: () => ForgetPassword.id,
+                            child: const Text('Forget password ?',
+                                style: TextStyle(
+                                    fontSize: 16, color: Color(0xFF340CB9))),
                           )
                         ],
                       ),

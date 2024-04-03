@@ -10,14 +10,14 @@ class Button extends StatelessWidget {
       required this.colorBtn,
       required this.colorTxt,
       required this.height,
-      required this.textSize});
+      this.textSize});
   String text;
   VoidCallback tap;
   double width;
   double height;
   Color colorBtn;
   Color colorTxt;
-  double textSize;
+  double? textSize;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -32,7 +32,7 @@ class Button extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: TextStyle(fontSize: textSize, color: colorTxt),
+            style: TextStyle(fontSize: textSize ?? 16, color: colorTxt),
           ),
         ),
       ),
