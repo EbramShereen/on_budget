@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:on_budget/models/home_model.dart';
 import 'package:on_budget/widgets/home/home_sections/home_items.dart';
 
 class UnderwearItemsListView extends StatelessWidget {

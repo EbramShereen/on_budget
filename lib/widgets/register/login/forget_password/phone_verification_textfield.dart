@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
+// ignore: must_be_immutable
 class PhoneVerificationTextField extends StatelessWidget {
   PhoneVerificationTextField({super.key, required this.phoneNumber});
   FocusNode focusNode = FocusNode();

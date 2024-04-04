@@ -1,8 +1,5 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:on_budget/generated/l10n.dart';
 
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/views/generate_image/generate_t-shirt.dart';

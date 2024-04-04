@@ -1,6 +1,5 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:hidable/hidable.dart';
 import 'package:on_budget/components/home_background.dart';
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/widgets/home/home_sections/pants.dart';

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:on_budget/helper/constants.dart';
 
+// ignore: must_be_immutable
 class HomeBackground extends StatelessWidget {
   HomeBackground({super.key, required this.child});
   Widget child;

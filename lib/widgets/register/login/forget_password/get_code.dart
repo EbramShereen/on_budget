@@ -1,10 +1,9 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:on_budget/components/button.dart';
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/helper/media_query.dart';
 
+// ignore: must_be_immutable
 class GetCode extends StatefulWidget {
   GetCode({super.key, required this.codeSent, required this.sendCodeClick});
   bool codeSent;

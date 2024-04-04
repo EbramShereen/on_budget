@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:lottie/lottie.dart';
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/gender_widget.dart';
 

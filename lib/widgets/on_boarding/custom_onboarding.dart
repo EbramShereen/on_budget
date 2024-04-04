@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+// ignore: must_be_immutable
 class CustomOnBoarding extends StatelessWidget {
   CustomOnBoarding({
     super.key,

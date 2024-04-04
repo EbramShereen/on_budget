@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class LoginTextField extends StatelessWidget {
   LoginTextField({super.key, required this.hint, required this.icon});
   String hint;

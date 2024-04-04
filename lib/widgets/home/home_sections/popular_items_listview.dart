@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:on_budget/widgets/home/home_sections/home_items.dart';
-import 'package:on_budget/widgets/home/home_sections/home_items.dart';
 
 class PopularItemsListView extends StatelessWidget {
   const PopularItemsListView({
