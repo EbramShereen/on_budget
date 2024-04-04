@@ -1,6 +1,6 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/views/generate_image/generate_t-shirt.dart';
 import 'package:on_budget/views/home/home.dart';
@@ -10,11 +10,12 @@ import 'package:on_budget/views/register/sign_up/email_verification.dart';
 import 'package:on_budget/views/register/login/forget_password.dart';
 import 'package:on_budget/views/register/sign_up/signup_options.dart';
 import 'package:on_budget/views/register/sign_up/signup_with_email.dart';
+import 'package:on_budget/views/register/sign_up/store_or_customer.dart';
 import 'package:on_budget/views/splash/on_boarding.dart';
 import 'package:on_budget/views/splash/on_boarding_language.dart';
 
 void main() {
-  runApp(const OnBudget());
+  runApp(DevicePreview(builder: (context) => const OnBudget()));
 }
 
 class OnBudget extends StatelessWidget {
@@ -69,5 +70,6 @@ Map<String, WidgetBuilder> get routes {
     OnBoardingScreens.id: (context) => const OnBoardingScreens(),
     ForgetPassword.id: (context) => const ForgetPassword(),
     OnBoardingLanguage.id: (context) => const OnBoardingLanguage(),
+    StoreOrCustomer.id: (context) => const StoreOrCustomer()
   };
 }

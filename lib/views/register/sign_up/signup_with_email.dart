@@ -8,7 +8,7 @@ import 'package:on_budget/helper/media_query.dart';
 import 'package:on_budget/views/home/home.dart';
 import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/already_have_account.dart';
 import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/confirm_policy.dart';
-import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/customer_store_choice.dart';
+import 'package:on_budget/widgets/register/sign_up/store_or_customer/customer_store_choice.dart';
 import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/gender_choice.dart';
 import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/signup_textfield.dart';
 
@@ -38,7 +38,6 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
                 Gap(MediaQuerySizes.getHeight(context) * .01),
                 const SignupTextField(),
                 Gap(MediaQuerySizes.getHeight(context) * .025),
-                const CustomerStoreChoice(),
                 Gap(MediaQuerySizes.getHeight(context) * .02),
                 const ConfirmPolicy(),
                 Gap(MediaQuerySizes.getHeight(context) * .015),

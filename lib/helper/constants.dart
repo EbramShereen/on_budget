@@ -31,8 +31,7 @@ const String kGoogleIcon =
     'lib/assets/register/register_options/google-icon.svg';
 
 //sign up with email
-const String kBoyIcon = 'lib/assets/register/signup_by_email/boy.json';
-const String kGirlIcon = 'lib/assets/register/signup_by_email/girl.json';
-const String kShopIcon = 'lib/assets/register/signup_by_email/shop.json';
-const String kCustomerIcon =
-    'lib/assets/register/signup_by_email/customer.json';
+const String kBoyIcon = 'lib/assets/register/signup_by_email/boy.png';
+const String kGirlIcon = 'lib/assets/register/signup_by_email/girl.png';
+const String kShopIcon = 'lib/assets/register/signup_by_email/store.png';
+const String kCustomerIcon = 'lib/assets/register/signup_by_email/customer.png';

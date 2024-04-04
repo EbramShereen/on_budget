@@ -7,6 +7,7 @@ import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/helper/media_query.dart';
 import 'package:on_budget/views/register/login/login.dart';
 import 'package:on_budget/views/register/sign_up/signup_with_email.dart';
+import 'package:on_budget/views/register/sign_up/store_or_customer.dart';
 import 'package:on_budget/widgets/register/sign_up/signup_options/signup_social_icons.dart';
 import 'package:text_divider/text_divider.dart';
 
@@ -56,7 +57,7 @@ class SignupOptions extends StatelessWidget {
                     textSize: MediaQuerySizes.getWidth(context) * .055,
                     text: 'Email',
                     tap: () =>
-                        Navigator.pushNamed(context, SignUpWithEmail.id)),
+                        Navigator.pushNamed(context, StoreOrCustomer.id)),
                 Gap(MediaQuerySizes.getHeight(context) * .08),
                 Padding(
                     padding: EdgeInsets.symmetric(

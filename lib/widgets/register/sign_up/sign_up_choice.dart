@@ -27,10 +27,9 @@ class SignUpChoice extends StatelessWidget {
                 radius: MediaQuerySizes.getWidth(context) * .143,
                 backgroundColor: const Color(0xffD9D9D9),
                 child: Center(
-                  child: Lottie.asset(
+                  child: Image.asset(
                     image,
-                    animate: false,
-                    width: MediaQuerySizes.getWidth(context) * .5,
+                    width: MediaQuerySizes.getWidth(context) * .9,
                   ),
                 ),
               ),
@@ -41,9 +40,9 @@ class SignUpChoice extends StatelessWidget {
             child: CircleAvatar(
               radius: MediaQuerySizes.getWidth(context) * .15,
               backgroundColor: const Color(0xffD9D9D9),
-              child: Lottie.asset(
+              child: Image.asset(
                 image,
-                width: MediaQuerySizes.getWidth(context) * .5,
+                width: MediaQuerySizes.getWidth(context) * .9,
               ),
             ),
           );

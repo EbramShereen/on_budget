@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:on_budget/helper/constants.dart';
-import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/gender_widget.dart';
+import 'package:on_budget/widgets/register/sign_up/sign_up_choice.dart';
 
 class GenderChoice extends StatefulWidget {
   const GenderChoice({super.key});
