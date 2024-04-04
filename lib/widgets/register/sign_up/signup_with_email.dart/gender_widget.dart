@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import 'package:on_budget/helper/constants.dart';
+import 'package:on_budget/helper/media_query.dart';
 
 // ignore: must_be_immutable
-class GenderWidget extends StatelessWidget {
-  GenderWidget(
+class SignUpChoice extends StatelessWidget {
+  SignUpChoice(
       {super.key,
       required this.image,
       required this.tap,
@@ -12,27 +14,37 @@ class GenderWidget extends StatelessWidget {
   bool isSelect = false;
   String image;
   VoidCallback tap;
+
   @override
   Widget build(BuildContext context) {
     return isSelect == true
         ? CircleAvatar(
-            radius: 54,
+            radius: MediaQuerySizes.getWidth(context) * .15,
             backgroundColor: kPrimaryColor,
             child: GestureDetector(
               onTap: tap,
               child: CircleAvatar(
-                radius: 50,
+                radius: MediaQuerySizes.getWidth(context) * .143,
                 backgroundColor: const Color(0xffD9D9D9),
-                child: Image.asset(image),
+                child: Center(
+                  child: Lottie.asset(
+                    image,
+                    animate: false,
+                    width: MediaQuerySizes.getWidth(context) * .5,
+                  ),
+                ),
               ),
             ),
           )
         : GestureDetector(
             onTap: tap,
             child: CircleAvatar(
-              radius: 50,
+              radius: MediaQuerySizes.getWidth(context) * .15,
               backgroundColor: const Color(0xffD9D9D9),
-              child: Image.asset(image),
+              child: Lottie.asset(
+                image,
+                width: MediaQuerySizes.getWidth(context) * .5,
+              ),
             ),
           );
   }

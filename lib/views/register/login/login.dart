@@ -6,7 +6,7 @@ import 'package:on_budget/components/mini_background.dart';
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/views/home/home.dart';
 import 'package:on_budget/views/register/login/forget_password.dart';
-import 'package:on_budget/widgets/login/login_text_field.dart';
+import 'package:on_budget/widgets/register/login/login_text_field.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});

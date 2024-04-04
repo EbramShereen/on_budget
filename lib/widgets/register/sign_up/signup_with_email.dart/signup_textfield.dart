@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:on_budget/widgets/register/signup_with_email.dart/text_field_signup.dart';
+import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/text_field_signup.dart';
 
 class SignupTextField extends StatefulWidget {
   const SignupTextField({

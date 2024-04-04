@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/widgets/register/signup_with_email.dart/gender_widget.dart';
+import 'package:lottie/lottie.dart';
+import 'package:on_budget/helper/constants.dart';
+import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/gender_widget.dart';
 
 class GenderChoice extends StatefulWidget {
   const GenderChoice({super.key});
@@ -19,8 +21,8 @@ class _GenderChoiceState extends State<GenderChoice> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        GenderWidget(
-          image: 'lib/assets/register/signup_by_mail/boy.png',
+        SignUpChoice(
+          image: kBoyIcon,
           tap: () => setState(() {
             isSelectBoy = true;
             isSelectGirl = false;
@@ -28,8 +30,8 @@ class _GenderChoiceState extends State<GenderChoice> {
           isSelect: isSelectBoy,
         ),
         const Gap(45),
-        GenderWidget(
-          image: 'lib/assets/register/signup_by_mail/girl.png',
+        SignUpChoice(
+          image: kGirlIcon,
           tap: () => setState(() {
             isSelectBoy = false;
             isSelectGirl = true;

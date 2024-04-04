@@ -4,12 +4,13 @@ import 'package:gap/gap.dart';
 import 'package:on_budget/components/button.dart';
 import 'package:on_budget/components/background.dart';
 import 'package:on_budget/helper/constants.dart';
+import 'package:on_budget/helper/media_query.dart';
 import 'package:on_budget/views/home/home.dart';
-import 'package:on_budget/widgets/register/signup_with_email.dart/already_have_account.dart';
-import 'package:on_budget/widgets/register/signup_with_email.dart/confirm_policy.dart';
-import 'package:on_budget/widgets/register/signup_with_email.dart/customer_store_choice.dart';
-import 'package:on_budget/widgets/register/signup_with_email.dart/gender_choice.dart';
-import 'package:on_budget/widgets/register/signup_with_email.dart/signup_textfield.dart';
+import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/already_have_account.dart';
+import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/confirm_policy.dart';
+import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/customer_store_choice.dart';
+import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/gender_choice.dart';
+import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/signup_textfield.dart';
 
 class SignUpWithEmail extends StatefulWidget {
   const SignUpWithEmail({super.key});
@@ -32,15 +33,15 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
           children: [
             Column(
               children: [
-                const Gap(20),
+                Gap(MediaQuerySizes.getHeight(context) * .03),
                 const GenderChoice(),
-                const Gap(10),
+                Gap(MediaQuerySizes.getHeight(context) * .01),
                 const SignupTextField(),
-                const Gap(20),
+                Gap(MediaQuerySizes.getHeight(context) * .025),
                 const CustomerStoreChoice(),
-                const Gap(20),
+                Gap(MediaQuerySizes.getHeight(context) * .02),
                 const ConfirmPolicy(),
-                const Gap(10),
+                Gap(MediaQuerySizes.getHeight(context) * .015),
                 Button(
                   text: 'Sign Up',
                   tap: () => Navigator.push(
@@ -54,9 +55,9 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
                   height: 30,
                   textSize: 20,
                 ),
-                const Gap(10),
+                Gap(MediaQuerySizes.getHeight(context) * .02),
                 const AlreadyHaveAccount(),
-                const Gap(10),
+                Gap(MediaQuerySizes.getHeight(context) * .03),
               ],
             ),
           ],

@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:on_budget/components/button.dart';
 import 'package:on_budget/components/background.dart';
 import 'package:on_budget/helper/constants.dart';
-import 'package:on_budget/widgets/register/otp/otp.dart';
+import 'package:on_budget/widgets/register/sign_up/otp/otp.dart';
 
 class EmailVerification extends StatelessWidget {
   const EmailVerification({super.key});

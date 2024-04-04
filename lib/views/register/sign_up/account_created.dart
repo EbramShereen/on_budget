@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/widgets/register/account_created/account_created_widget.dart';
+import 'package:on_budget/widgets/register/sign_up/account_created/account_created_widget.dart';
 
 class AccountCreated extends StatelessWidget {
   const AccountCreated({super.key});

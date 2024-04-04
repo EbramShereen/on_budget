@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:on_budget/components/app_bar.dart';
 import 'package:on_budget/components/background.dart';
 import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/helper/media_query.dart';
-import 'package:on_budget/widgets/login/forget_password/code_sent_to.dart';
-import 'package:on_budget/widgets/login/forget_password/get_code.dart';
-import 'package:on_budget/widgets/login/forget_password/phone_verification_textfield.dart';
-import 'package:on_budget/widgets/login/forget_password/reset_code.dart';
+import 'package:on_budget/widgets/register/login/forget_password/code_sent_to.dart';
+import 'package:on_budget/widgets/register/login/forget_password/get_code.dart';
+import 'package:on_budget/widgets/register/login/forget_password/phone_verification_textfield.dart';
+import 'package:on_budget/widgets/register/login/forget_password/reset_code.dart';
 
 class ForgetPassword extends StatefulWidget {
   const ForgetPassword({super.key});

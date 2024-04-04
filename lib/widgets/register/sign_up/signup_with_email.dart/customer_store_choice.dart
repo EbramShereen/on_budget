@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/widgets/register/signup_with_email.dart/gender_widget.dart';
+import 'package:on_budget/helper/constants.dart';
+import 'package:on_budget/widgets/register/sign_up/signup_with_email.dart/gender_widget.dart';
 
 class CustomerStoreChoice extends StatefulWidget {
   const CustomerStoreChoice({super.key});
@@ -17,16 +18,16 @@ class _CustomerStoreChoiceState extends State<CustomerStoreChoice> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        GenderWidget(
-            image: 'lib/assets/register/signup_by_mail/customer.png',
+        SignUpChoice(
+            image: kCustomerIcon,
             tap: () => setState(() {
                   isSelectCustomer = true;
                   isSelectStore = false;
                 }),
             isSelect: isSelectCustomer),
         const Gap(70),
-        GenderWidget(
-            image: 'lib/assets/register/signup_by_mail/store.png',
+        SignUpChoice(
+            image: kShopIcon,
             tap: () => setState(() {
                   isSelectCustomer = false;
                   isSelectStore = true;

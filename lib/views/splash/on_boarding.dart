@@ -3,7 +3,7 @@ import 'package:on_budget/helper/constants.dart';
 import 'package:on_budget/helper/media_query.dart';
 import 'package:on_budget/views/register/login/login.dart';
 import 'package:on_budget/views/register/sign_up/signup_options.dart';
-import 'package:on_budget/widgets/splash/custom_onboarding.dart';
+import 'package:on_budget/widgets/on_boarding/custom_onboarding.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 
 class OnBoardingScreens extends StatelessWidget {
