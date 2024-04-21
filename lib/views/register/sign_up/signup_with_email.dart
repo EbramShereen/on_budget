@@ -20,6 +20,8 @@ class SignUpWithEmail extends StatefulWidget {
   State<SignUpWithEmail> createState() => _SignUpWithEmailState();
 }
 
+GlobalKey<FormState> formKey = GlobalKey();
+
 class _SignUpWithEmailState extends State<SignUpWithEmail> {
   @override
   Widget build(BuildContext context) {
@@ -36,18 +38,21 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
                 Gap(MediaQuerySizes.getHeight(context) * .03),
                 const GenderChoice(),
                 Gap(MediaQuerySizes.getHeight(context) * .01),
-                const SignupTextField(),
+                SignupTextField(
+                  formKey: formKey,
+                ),
                 Gap(MediaQuerySizes.getHeight(context) * .025),
                 Gap(MediaQuerySizes.getHeight(context) * .02),
                 const ConfirmPolicy(),
                 Gap(MediaQuerySizes.getHeight(context) * .015),
                 Button(
                   text: 'Sign Up',
-                  tap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Home(),
-                      )),
+                  tap: () {
+                    if (formKey.currentState!.validate()) {
+                      formKey.currentState!.save();
+                      Navigator.pushNamed(context, Home.id);
+                    }
+                  },
                   width: 220,
                   colorBtn: kPrimaryColor,
                   colorTxt: kSecondaryColor,

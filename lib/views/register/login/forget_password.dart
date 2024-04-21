@@ -8,6 +8,7 @@ import 'package:on_budget/widgets/register/login/forget_password/code_sent_to.da
 import 'package:on_budget/widgets/register/login/forget_password/get_code.dart';
 import 'package:on_budget/widgets/register/login/forget_password/phone_verification_textfield.dart';
 import 'package:on_budget/widgets/register/login/forget_password/reset_code.dart';
+import 'package:on_budget/widgets/register/login/forget_password/otp/otp.dart';
 
 class ForgetPassword extends StatefulWidget {
   const ForgetPassword({super.key});
@@ -49,7 +50,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   ),
                 ),
                 width: MediaQuerySizes.getWidth(context) * .89,
-                height: MediaQuerySizes.getWidth(context) * .85,
+                height: MediaQuerySizes.getHeight(context) * .3,
                 child: Column(
                   children: [
                     Gap(MediaQuerySizes.getHeight(context) * .04),
@@ -57,7 +58,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       'We will send a mail to',
                       style: TextStyle(
                         color: const Color(0xFF1C2340),
-                        fontSize: MediaQuerySizes.getWidth(context) * .05,
+                        fontSize: MediaQuerySizes.getWidth(context) * .04,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -65,7 +66,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       'the email address you registered',
                       style: TextStyle(
                         color: const Color(0xFF1C2340),
-                        fontSize: MediaQuerySizes.getWidth(context) * .05,
+                        fontSize: MediaQuerySizes.getWidth(context) * .04,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -73,10 +74,11 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       'to regain your password',
                       style: TextStyle(
                         color: const Color(0xFF1C2340),
-                        fontSize: MediaQuerySizes.getWidth(context) * .05,
+                        fontSize: MediaQuerySizes.getWidth(context) * .04,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
+                    Gap(MediaQuerySizes.getWidth(context) * .04),
                     PhoneVerificationTextField(
                       phoneNumber: phoneNumber,
                     ),
@@ -91,8 +93,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                             ))
                         : GestureDetector(
                             onTap: () {
-                              codeSent = true;
-                              sendCodeClick = true;
+                              Navigator.pushNamed(context, Otp.id);
                             },
                             child: GetCode(
                               codeSent: codeSent,

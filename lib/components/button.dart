@@ -1,16 +1,20 @@
+// This class defines a customizable Button widget that detects taps.
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class Button extends StatelessWidget {
+  // Constructor requires parameters for text, tap action, dimensions, and colors.
   Button(
       {super.key,
-      required this.text,
-      required this.tap,
-      required this.width,
-      required this.colorBtn,
-      required this.colorTxt,
-      required this.height,
-      this.textSize});
+      required this.text, // Text to display on the button.
+      required this.tap, // Function to execute on tap.
+      required this.width, // Width of the button.
+      required this.colorBtn, // Color of the button.
+      required this.colorTxt, // Color of the text.
+      required this.height, // Height of the button.
+      this.textSize}); // Optional text size, defaults to 16 if not provided.
+
+  // Fields for the button's customization parameters.
   String text;
   VoidCallback tap;
   double width;
@@ -18,21 +22,27 @@ class Button extends StatelessWidget {
   Color colorBtn;
   Color colorTxt;
   double? textSize;
+
   @override
   Widget build(BuildContext context) {
+    // Builds the Button widget with a GestureDetector to handle taps.
     return GestureDetector(
-      onTap: tap,
+      onTap:
+          tap, // Executes the provided tap function when the button is tapped.
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(Radius.circular(23)),
-          color: colorBtn,
+          borderRadius: const BorderRadius.all(
+              Radius.circular(23)), // Rounded corners for the button.
+          color: colorBtn, // Background color of the button.
         ),
-        width: width,
-        height: height,
+        width: width, // Sets the button's width.
+        height: height, // Sets the button's height.
         child: Center(
           child: Text(
-            text,
-            style: TextStyle(fontSize: textSize ?? 16, color: colorTxt),
+            text, // Displays the provided text.
+            style: TextStyle(
+                fontSize: textSize ?? 16,
+                color: colorTxt), // Applies the text style.
           ),
         ),
       ),

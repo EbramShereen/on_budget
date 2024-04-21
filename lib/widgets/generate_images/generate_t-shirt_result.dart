@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 
 import 'package:on_budget/components/button.dart';
 import 'package:on_budget/helper/constants.dart';
+import 'package:on_budget/helper/media_query.dart';
 
 class GenerateTshirtResult extends StatelessWidget {
   const GenerateTshirtResult({
@@ -19,34 +20,35 @@ class GenerateTshirtResult extends StatelessWidget {
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(34)),
             ),
-            width: 235,
-            height: 206,
-            child: Image.asset('lib/assets/image 2.png'),
+            width: 400,
+            height: 200,
+            child: Image.asset(generateImage),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Button(
-                textSize: 15,
+                textSize: 14,
                 text: 'Add To Cart',
                 tap: () {},
-                width: 105,
+                width: 120,
                 colorBtn: kPrimaryColor,
                 colorTxt: kSecondaryColor,
-                height: 33,
+                height: 40,
               ),
               const Gap(31),
               Button(
-                  textSize: 15,
-                  text: 'Regenerate',
-                  tap: () {},
-                  width: 105,
-                  colorBtn: kPrimaryColor,
-                  colorTxt: kSecondaryColor,
-                  height: 33),
+                textSize: 14,
+                text: 'Regenrate',
+                tap: () {},
+                width: 120,
+                colorBtn: kPrimaryColor,
+                colorTxt: kSecondaryColor,
+                height: 40,
+              ),
             ],
           ),
         ),

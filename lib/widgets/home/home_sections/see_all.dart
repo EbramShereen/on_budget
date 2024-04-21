@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:on_budget/helper/media_query.dart';
 
 class SeeAll extends StatelessWidget {
   const SeeAll({
@@ -13,27 +15,27 @@ class SeeAll extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Gap(10),
+        Gap(MediaQuerySizes.getWidth(context) * .1),
         SizedBox(
-          width: 150,
-          height: 20,
+          width: MediaQuerySizes.getWidth(context) * .4,
+          height: MediaQuerySizes.getHeight(context) * .03,
           child: Text(
             text,
-            style: const TextStyle(
-              color: Color(0xFF1C2340),
-              fontSize: 18,
+            style: TextStyle(
+              color: const Color(0xFF1C2340),
+              fontSize: MediaQuerySizes.getWidth(context) * .045,
               fontWeight: FontWeight.w700,
             ),
           ),
         ),
-        const Gap(160),
+        Gap(MediaQuerySizes.getWidth(context) * .3),
         GestureDetector(
           onTap: () {},
-          child: const Text(
+          child: Text(
             'See All +',
             style: TextStyle(
-              color: Color(0xFF8A8D9F),
-              fontSize: 16,
+              color: const Color(0xFF8A8D9F),
+              fontSize: MediaQuerySizes.getWidth(context) * .045,
               fontWeight: FontWeight.w700,
             ),
           ),

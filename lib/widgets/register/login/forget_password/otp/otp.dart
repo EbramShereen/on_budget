@@ -7,7 +7,7 @@ class Otp extends StatelessWidget {
   const Otp({
     super.key,
   });
-
+  static String id = 'Otp';
   @override
   Widget build(BuildContext context) {
     return OtpTextField(

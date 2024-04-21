@@ -26,12 +26,7 @@ class SignUpChoice extends StatelessWidget {
               child: CircleAvatar(
                 radius: MediaQuerySizes.getWidth(context) * .143,
                 backgroundColor: const Color(0xffD9D9D9),
-                child: Center(
-                  child: Image.asset(
-                    image,
-                    width: MediaQuerySizes.getWidth(context) * .9,
-                  ),
-                ),
+                backgroundImage: AssetImage(image),
               ),
             ),
           )
@@ -40,10 +35,7 @@ class SignUpChoice extends StatelessWidget {
             child: CircleAvatar(
               radius: MediaQuerySizes.getWidth(context) * .15,
               backgroundColor: const Color(0xffD9D9D9),
-              child: Image.asset(
-                image,
-                width: MediaQuerySizes.getWidth(context) * .9,
-              ),
+              backgroundImage: AssetImage(image),
             ),
           );
   }
