@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Button extends StatelessWidget {
   const Button(
       {super.key,
       required this.text,
-      required this.tap,
+      this.tap,
       required this.width,
       required this.colorBtn,
       required this.colorTxt,
@@ -12,7 +13,7 @@ class Button extends StatelessWidget {
       this.textSize});
 
   final String text;
-  final VoidCallback tap;
+  final VoidCallback? tap;
   final double width;
   final double height;
   final Color colorBtn;
@@ -25,7 +26,7 @@ class Button extends StatelessWidget {
       onTap: tap,
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(Radius.circular(23)),
+          borderRadius: const BorderRadius.all(Radius.circular(23)).w,
           color: colorBtn,
         ),
         width: width,
@@ -33,7 +34,7 @@ class Button extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: TextStyle(fontSize: textSize ?? 16, color: colorTxt),
+            style: TextStyle(fontSize: textSize ?? 16.sp, color: colorTxt),
           ),
         ),
       ),
