@@ -29,44 +29,37 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animated_notch_bottom_bar: ^1.0.2
-  animated_toggle_switch: ^0.8.2
-  awesome_icons: ^1.1.0
-  bloc: ^8.1.4
   card_loading:
     git:
       url: https://github.com/EbramShereen/card_loading.git
   cupertino_icons: ^1.0.2
-  dart_frog: ^1.1.0
-  dash_chat_2: ^0.0.20
-  dio: ^5.4.0
+
   firebase_auth: ^4.19.4
-  firebase_core: ^2.30.1
+  firebase_core: ^2.31.0
+  firebase_ml_model_downloader: ^0.2.5+4
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.5
   flutter_facebook_auth: ^6.2.0
-  flutter_feather_icons: ^2.0.0+1
   flutter_gemini: ^2.0.3
   flutter_localizations:
     sdk: flutter
   flutter_onboarding_slider: ^1.0.11
   flutter_otp_text_field: ^1.1.0+2
-  flutter_screenutil: ^5.9.0
+  flutter_paymob: ^1.0.5
+  flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.10+1
   gap: ^3.0.1
   google_fonts: ^6.2.1
   google_generative_ai: ^0.3.1
   google_sign_in: ^6.2.1
-  hidable: ^1.0.3
   http: ^1.2.1
   image_picker: ^1.1.0
-  intl_phone_field: ^3.2.0
-  lottie: ^3.1.0
-  provider: ^6.1.2
-  sign_in_button: ^3.2.0
+  intl_phone_number_input: ^0.7.4
+  simple_circular_progress_bar: ^1.0.2
   text_divider: ^1.0.0
+  tflite_flutter: ^0.10.4
   twitter_login: ^4.4.2
-  unicons: ^2.1.1
 
 dev_dependencies:
   flutter_launcher_icons: "^0.13.1"
@@ -96,17 +89,18 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/src/res/images//splash/
-    - lib/src/res/images//register/account_created/
-    - lib/src/res/images//register/register_options/
-    - lib/src/res/images//register/signup_by_email/
-    - lib/src/res/images//home/
-    - lib/src/res/images//chatbot/
-    - lib/src/res/images//splash/splash_one.png
-    - lib/src/res/images//splash/splash_two.png
-    - lib/src/res/images//splash/splash_three.png
-    - lib/src/res/images//empty_state/
+    - lib/src/res/images/splash/
+    - lib/src/res/images/register/account_created/
+    - lib/src/res/images/register/register_options/
+    - lib/src/res/images/register/signup_by_email/
+    - lib/src/res/images/home/
+    - lib/src/res/images/chatbot/
+    - lib/src/res/images/splash/splash_one.png
+    - lib/src/res/images/splash/splash_two.png
+    - lib/src/res/images/splash/splash_three.png
+    - lib/src/res/images/empty_state/
     - lib/src/res/images/bottom_bar/
+    - lib/src/res/images/logo.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
