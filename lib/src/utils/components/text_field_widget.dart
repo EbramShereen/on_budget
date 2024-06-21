@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../helper/constants/colors.dart';
 
@@ -11,7 +12,8 @@ class TextFieldWidget extends StatelessWidget {
     this.suffixIcon,
     this.prefixIcon,
     this.prefix,
-    this.controller, this.text,
+    this.controller,
+    this.text,
   });
 
   final String? hintText;
@@ -33,21 +35,19 @@ class TextFieldWidget extends StatelessWidget {
         prefixIcon: prefixIcon,
         prefix: prefix,
         suffixIcon: suffixIcon,
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: kTextFieldBorder, width: 3),
-          borderRadius: BorderRadius.all(
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: kTextFieldBorder, width: 3.w),
+          borderRadius: const BorderRadius.all(
             Radius.circular(20),
-          ),
+          ).w,
         ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: kPrimaryColor, width: 3),
-          borderRadius: BorderRadius.all(
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: kPrimaryColor, width: 3.w),
+          borderRadius: const BorderRadius.all(
             Radius.circular(20),
           ),
         ),
       ),
-
-      
     );
   }
 }

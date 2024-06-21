@@ -21,3 +21,6 @@ const Color ktoogleOff = Color(0xFF8A9698); // Color used for toogle off button
 const Color ktoogleOn = Color(0xFF006880); // Color used for toggle on button
 const Color ktoogleBackground =
     Color(0xFFF4F5F7); // Color used for toogle background
+const Color kProgressLoadingBackground = Color(0xFFD1D2D3);
+
+const Color kStars = Color(0xFFFFC120);//for stars rating

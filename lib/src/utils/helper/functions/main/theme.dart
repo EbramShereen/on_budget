@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:on_budget/src/utils/helper/constants/colors.dart';
+
+import '../../constants/colors.dart';
 
 class Themes {
   ThemeData theme(BuildContext context) {

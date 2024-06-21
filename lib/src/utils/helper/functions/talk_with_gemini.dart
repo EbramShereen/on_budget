@@ -1,13 +1,13 @@
 import 'package:google_generative_ai/google_generative_ai.dart';
 
-import '../../../modules/chatbot/data/models/chatbot_model.dart';
-import '../api/chat_bot.dart';
+import '../../../data/models/chatbot/chatbot_model.dart';
+import '../constants/api.dart';
 import '../constants/chat_date.dart';
 
 class TalkWithGemini {
   final Function(List<ChatBotModel>) updateMessagesList;
   String? msg;
-  List<ChatBotModel> messagesList; 
+  List<ChatBotModel> messagesList;
 
   TalkWithGemini({
     required this.updateMessagesList,
@@ -17,7 +17,7 @@ class TalkWithGemini {
 
   Future<void> talkWithGemini() async {
     final model =
-        GenerativeModel(model: kChatBotVersion, apiKey: kChatBotApiKey);
+        GenerativeModel(model: ChatbotApi().kChatBotVersion, apiKey: ChatbotApi().kChatBotApiKey);
     List<ChatBotModel> updatedMessagesList = List.from(messagesList);
 
     final content = Content.text(msg!);

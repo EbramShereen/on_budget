@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:on_budget/src/modules/profile/presentation/views/adresses/show_addresses.dart';
-import 'package:on_budget/src/modules/profile/presentation/views/copoun/empty_copoun.dart';
-import 'package:on_budget/src/modules/profile/presentation/views/notifications/empty_notification.dart';
-import 'package:on_budget/src/modules/profile/presentation/views/orders/empty_order.dart';
-import 'package:on_budget/src/modules/profile/presentation/views/wishlist/empty_wishlist.dart';
-import 'package:on_budget/src/modules/profile/presentation/widgets/profile_sections.dart';
-import 'package:on_budget/src/modules/register/presentation/views/login/login.dart';
-import 'package:on_budget/src/utils/components/show_dialog.dart';
+
+import '../../../persentation/profile/views/adresses/show_addresses.dart';
+import '../../../persentation/profile/views/copoun/empty_copoun.dart';
+import '../../../persentation/profile/views/notifications/empty_notification.dart';
+import '../../../persentation/profile/views/orders/empty_order.dart';
+import '../../../persentation/profile/views/wishlist/empty_wishlist.dart';
+import '../../../persentation/profile/widgets/profile_sections.dart';
+import '../../../persentation/register/modules/login/views/login.dart';
+import '../show_dialog.dart';
 
 class GetProfileSections {
   BuildContext context;

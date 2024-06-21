@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 import '../helper/constants/colors.dart';
-import '../helper/functions/responsive.dart';
 
 class HomeBackground extends StatelessWidget {
   const HomeBackground({super.key, required this.child});
@@ -20,8 +18,8 @@ class HomeBackground extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 20, top: 50),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, top: 50).w,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -29,22 +27,21 @@ class HomeBackground extends StatelessWidget {
                         'HI Ebram Shereen',
                         style: TextStyle(
                             color: kSecondaryColor,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w500),
                       ),
                       Text(
                         'Good Morning',
                         style: TextStyle(
                             color: kSecondaryColor,
-                            fontSize: 25,
+                            fontSize: 25.sp,
                             fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
-                      top: MediaQuerySizes.getHeight(context) * .05),
+                  padding: const EdgeInsets.only(top: 30).w,
                   child: Row(
                     children: [
                       Stack(
@@ -56,25 +53,25 @@ class HomeBackground extends StatelessWidget {
                                 color: Colors.white,
                                 size: 35,
                               )),
-                          const Positioned(
-                            top: 13,
-                            left: 28,
+                          Positioned(
+                            top: ScreenUtil().setHeight(11),
+                            left: ScreenUtil().setWidth(22),
                             child: CircleAvatar(
                               backgroundColor: Colors.red,
-                              radius: 4,
+                              radius: 3.r,
                             ),
                           ),
                         ],
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.shopping_cart_outlined,
                           color: Colors.white,
-                          size: 35,
+                          size: ScreenUtil().setWidth(25),
                         ),
                       ),
-                      const Gap(20)
+                      Gap(ScreenUtil().setWidth(20))
                     ],
                   ),
                 )
@@ -84,12 +81,12 @@ class HomeBackground extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: Container(
-                  decoration: const BoxDecoration(
-                      color: Color(0xFFd6d9da),
-                      borderRadius: BorderRadius.only(
+                  decoration: BoxDecoration(
+                      color: const Color(0xFFd6d9da),
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30),
-                      )),
+                      ).w),
                   child: child,
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../helper/constants/colors.dart';
 import 'button.dart';
@@ -7,8 +8,8 @@ Future<dynamic> showDialogWidget(
   BuildContext context, {
   String? firstButtonText,
   String? secondButtonText,
-  required VoidCallback firstTap,
-  required VoidCallback secondTap,
+  VoidCallback? firstTap,
+  VoidCallback? secondTap,
   String? firstTitle,
   String? secondTitle,
   double? firstTitleSize,
@@ -40,7 +41,7 @@ Future<dynamic> showDialogWidget(
                 child: Button(
                   text: firstButtonText ?? 'sss',
                   tap: firstTap,
-                  width: 100,
+                  width: 100.w,
                   colorBtn: kSecondaryColor,
                   colorTxt: kCancelText,
                   height: 50,
@@ -52,7 +53,7 @@ Future<dynamic> showDialogWidget(
                 child: Button(
                   text: firstButtonText ?? '',
                   tap: firstTap,
-                  width: 100,
+                  width: 100.w,
                   colorBtn: kSecondaryColor,
                   colorTxt: kCancelText,
                   height: 50,
@@ -64,7 +65,7 @@ Future<dynamic> showDialogWidget(
           child: Button(
             text: secondButtonText ?? '',
             tap: secondTap,
-            width: 100,
+            width: 100.w,
             colorBtn: kPrimaryColor,
             colorTxt: kSecondaryColor,
             height: 50,

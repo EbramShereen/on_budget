@@ -9,8 +9,7 @@ final RegExp emailRegExp =
     RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$');
 
 // Regular expression for validating a phone number. It supports optional country code, spaces, hyphens, and dots as separators.
-final RegExp phoneRegExp =
-    RegExp(r'^\+?\d{1,3}[- .]?\(?\d{3}\)?[- .]?\d{3}[- .]?\d{4}$');
+final RegExp phoneRegExp = RegExp(r'^1[0-9]{9}$');
 
 // Regular expression for validating a password. It requires at least one uppercase letter, one lowercase letter, one digit, one special character, and a minimum length of 8 characters.
 final RegExp passwordRegExp =

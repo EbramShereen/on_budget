@@ -1,5 +1,5 @@
 //logo
-const String logo = 'lib/src/res/images//logo.png'; // Path to the app logo.
+const String logo = 'lib/src/res/images/logo.png'; // Path to the app logo.
 
 // Paths to onboarding splash images.
 const String kOnBoardingOne = 'lib/src/res/images/splash/splash_one.png';
@@ -36,3 +36,8 @@ const String kGenerateImagesActive =
     'lib/src/res/images/bottom_bar/generate_images_active.svg';
 const String kGenerateImagesInActive =
     'lib/src/res/images/bottom_bar/generate_images_inactive.svg';
+
+// add products
+
+const String kAddProductIcon =
+    'lib/src/res/images/add_product/add_product_icon.png';

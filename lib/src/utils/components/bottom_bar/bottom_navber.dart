@@ -1,15 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
-import 'package:on_budget/src/modules/chatbot/presentation/views/chatbot.dart';
-import 'package:on_budget/src/modules/generate_image/presentation/views/generate_t-shirt.dart';
-import 'package:on_budget/src/modules/home/presentation/views/home.dart';
-import 'package:on_budget/src/modules/home/presentation/views/search.dart';
+import 'package:on_budget/src/persentation/chatbot/views/chatbot.dart';
+import 'package:on_budget/src/persentation/generate_images/views/generate_t-shirt.dart';
+import 'package:on_budget/src/persentation/home/views/home.dart';
+import 'package:on_budget/src/persentation/home/views/search.dart';
+import 'package:on_budget/src/persentation/profile/views/profile.dart';
 import 'package:on_budget/src/utils/components/bottom_bar/scroll_to_hide_widget.dart';
-import 'package:on_budget/src/modules/profile/presentation/views/profile.dart';
-import 'package:on_budget/src/modules/profile/presentation/views/wishlist/empty_wishlist.dart';
 import 'package:on_budget/src/utils/helper/constants/colors.dart';
 import 'package:on_budget/src/utils/helper/constants/images.dart';
 
@@ -30,7 +29,7 @@ class CustomBottomNavBar extends StatelessWidget {
       case 0:
         currentIndex = 0;
         if (currentIndex != lastIndex) {
-          Navigator.pushNamed(context, Home.id);
+          // Navigator.pushNamed(context, Home.id);
         }
 
         break;
@@ -43,7 +42,7 @@ class CustomBottomNavBar extends StatelessWidget {
       case 2:
         currentIndex = 2;
         if (currentIndex != lastIndex) {
-          Navigator.pushNamed(context, ChatBot.id);
+          Navigator.pushNamed(context, ChatBotView.id);
         }
       case 3:
         currentIndex = 3;
@@ -105,8 +104,8 @@ class CustomBottomNavBar extends StatelessWidget {
           onTap: (index) {
             _handleTap(context, index);
           },
-          kBottomRadius: 28.0,
-          kIconSize: 25,
+          kBottomRadius: 28.0.r,
+          kIconSize: 25.r,
         ),
       ),
     );
