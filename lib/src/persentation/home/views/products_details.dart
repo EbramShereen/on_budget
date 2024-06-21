@@ -194,7 +194,7 @@ class SizePredictorView extends StatelessWidget {
               );
             } else {
               return const Text(
-                'Recommended Size: ',
+                'Recommended Size: L or M ',
                 style: TextStyle(fontSize: 24),
               );
             }
