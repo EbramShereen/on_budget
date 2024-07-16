@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:on_budget/src/persentation/register/modules/customer/views/signup_for_customer.dart';
+import 'package:on_budget/src/persentation/register/modules/supplier/views/signup_for_supplier.dart';
 
 import '../../../../../utils/helper/constants/images.dart';
 import 'sign_up_choice.dart';
@@ -23,38 +26,38 @@ class _CustomerStoreChoiceState extends State<CustomerStoreChoice> {
       children: [
         Column(
           children: [
-            StoreOrCustomer(
+            SupplierOrCustomer(
               image: kCustomerIcon,
               tap: () => setState(() {
                 isSelectCustomer = true;
                 isSelectStore = false;
-                widget.supplierNavigate = true;
-                widget.customerNavigate = false;
+
+                Navigator.pushNamed(context, SignUpForSupplier.id);
               }),
               isSelect: isSelectCustomer,
             ),
-            const Text(
-              'Seller',
-              style: TextStyle(fontSize: 30),
+            Text(
+              'Supplier',
+              style: TextStyle(fontSize: 30.sp),
             )
           ],
         ),
         const Gap(70),
         Column(
           children: [
-            StoreOrCustomer(
+            SupplierOrCustomer(
               image: kShopIcon,
               tap: () => setState(() {
                 isSelectCustomer = false;
                 isSelectStore = true;
-                widget.customerNavigate = true;
-                widget.supplierNavigate = false;
+
+                Navigator.pushNamed(context, SignUpForCustomer.id);
               }),
               isSelect: isSelectStore,
             ),
-            const Text(
-              'Buyer',
-              style: TextStyle(fontSize: 30),
+            Text(
+              'Customer',
+              style: TextStyle(fontSize: 30.sp),
             )
           ],
         ),

@@ -1,4 +1,4 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:on_budget/src/logic/chatbot/chatbot_states.dart';
 import '../../data/models/chatbot/chatbot_model.dart';
 import '../../data/repository/chatbot/chatbot_repository.dart';

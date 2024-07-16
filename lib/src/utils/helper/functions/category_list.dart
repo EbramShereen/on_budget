@@ -1,5 +1,5 @@
 List<String> items = [
-  'Recommended',
+  'Recomended',
   'Topwear',
   'Headwear',
   'Dress',

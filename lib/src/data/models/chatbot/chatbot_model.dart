@@ -1,4 +1,3 @@
-// chatbot_model.dart
 class ChatBotModel {
   String message;
   String date;

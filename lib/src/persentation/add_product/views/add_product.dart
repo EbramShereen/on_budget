@@ -8,7 +8,10 @@ import 'package:image_picker/image_picker.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 import 'package:on_budget/src/persentation/add_product/widgets/add_product_inputs_widget.dart';
 import 'package:on_budget/src/persentation/add_product/widgets/category_dropdown.dart';
+import 'package:on_budget/src/utils/components/button.dart';
 import 'package:on_budget/src/utils/components/leading_icon.dart';
+import 'package:on_budget/src/utils/components/show_dialog.dart';
+import 'package:on_budget/src/utils/helper/constants/colors.dart';
 import 'package:on_budget/src/utils/helper/constants/images.dart';
 import 'package:on_budget/src/persentation/add_product/widgets/add_image.dart';
 import 'package:on_budget/src/utils/helper/functions/category_list.dart';
@@ -86,14 +89,44 @@ class _AddProductState extends State<AddProduct> {
           title: const Text('Add Product'),
           leading: const LeadingIcon(),
         ),
-        body: Column(
-          children: [
-            AddProductsInputsWidget(),
-            Gap(ScreenUtil().setHeight(20)),
-            const CategoryDropdown(),
-            Gap(ScreenUtil().setHeight(20)),
-            const AddProductImage()
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              AddProductsInputsWidget(),
+              Gap(ScreenUtil().setHeight(20)),
+              const CategoryDropdown(),
+              Gap(ScreenUtil().setHeight(20)),
+              const AddProductImage(),
+              Gap(ScreenUtil().setHeight(40)),
+              Button(
+                  text: 'Submit',
+                  width: 150,
+                  tap: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          content: const Text('Product Added Successefly'),
+                          actions: [
+                            Center(
+                              child: Button(
+                                  text: 'okay',
+                                  width: 100,
+                                  colorBtn: kPrimaryColor,
+                                  tap: () => Navigator.pop(context),
+                                  colorTxt: kSecondaryColor,
+                                  height: 50),
+                            )
+                          ],
+                        );
+                      },
+                    );
+                  },
+                  colorBtn: kPrimaryColor,
+                  colorTxt: kSecondaryColor,
+                  height: 50)
+            ],
+          ),
         ));
   }
 }

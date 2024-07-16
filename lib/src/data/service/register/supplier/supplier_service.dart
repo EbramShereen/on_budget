@@ -1,9 +1,10 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:http/http.dart' as http;
 
 class SupplierService {
-  Future<Map<String, String>> supplierService({
+  Future<String> supplierService({
     required String url,
     required Map<String, String> supplierData,
   }) async {
@@ -13,10 +14,10 @@ class SupplierService {
         "Content-Type": "application/json",
         "Accept": "application/json",
       });
+      log(response.statusCode.toString());
       if (response.statusCode == 201 || response.statusCode == 200) {
-        return jsonDecode(response.body);
+        return response.body;
       } else {
-        print(response.statusCode);
         throw Exception(
             'Failed to post supplier data and this is status code: ${response.statusCode}');
       }

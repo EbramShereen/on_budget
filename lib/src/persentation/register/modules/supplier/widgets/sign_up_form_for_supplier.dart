@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:on_budget/src/persentation/add_product/views/add_product.dart';
 
 import '../../../../../utils/components/background.dart';
 import '../../../../../utils/components/button.dart';
@@ -54,19 +57,23 @@ class SignUpFormforSupplier extends StatelessWidget {
                     supplierFormKey.currentState!.save();
                     isValid = true;
                   }
+                  log('is valid : $isValid');
                   if (isValid) {
                     final isConfirmPolicySelected =
                         confirmPolicyKey.currentState?.checkBox ?? false;
+                    log('isConfirmPolicySelected : ${isConfirmPolicySelected.toString()}');
                     if (isConfirmPolicySelected) {
                       final cubit = context.read<SupplierCubit>();
-                      cubit.supplierCubit(
-                        firstName: firstNameController.text,
-                        lastName: lastNameController.text,
-                        phoneNumber: phoneController.text,
-                        handle: emailController.text,
-                        companyName: companyNameController.text,
-                        password: passwordController.text,
-                      );
+                      log('context.read : $cubit');
+                      cubit.supplierCubit(data: {
+                        'firstName': firstNameController.text,
+                        'lastName': lastNameController.text,
+                        'phoneNumber': phoneController.text,
+                        'password': passwordController.text,
+                        'handle': emailController.text,
+                        'companyName': companyNameController.text,
+                      });
+                      log('context.read : ${cubit.supplierCubit}');
                     } else {
                       showDialog(
                         context: context,
@@ -79,6 +86,7 @@ class SignUpFormforSupplier extends StatelessWidget {
                       );
                     }
                   }
+                  Navigator.pushNamed(context, AddProduct.id);
                 },
                 width: 220.w,
                 colorBtn: kPrimaryColor,

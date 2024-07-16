@@ -1,4 +1,6 @@
-const String baseUrl = 'http://10.0.2.2:5016/api';
+// const String baseUrl = 'http://10.0.2.2:5016/api';
+
+const String baseUrl = 'https://587b-156-209-82-116.ngrok-free.app/api';
 
 class RegisterApi {
   static const String customerSignUp = '$baseUrl/Registration/customer';

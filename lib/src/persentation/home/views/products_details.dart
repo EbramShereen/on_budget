@@ -11,7 +11,7 @@ import 'package:on_budget/src/logic/home/size_predictor/size_predictor_states.da
 import 'package:on_budget/src/persentation/cart/views/cart_view.dart';
 import 'package:on_budget/src/persentation/home/widgets/product_details/product_reviews.dart';
 import 'package:on_budget/src/persentation/home/widgets/product_details/stars/five_stars.dart';
-import 'package:on_budget/src/utils/cart.dart';
+import 'package:on_budget/src/data/models/cart/cart_model.dart';
 import 'package:on_budget/src/utils/components/background.dart';
 import 'package:on_budget/src/utils/components/button.dart';
 import 'package:on_budget/src/utils/components/leading_icon.dart';

@@ -3,9 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../utils/components/background.dart';
-import '../../../../../utils/components/button.dart';
-import '../../../../../utils/helper/constants/colors.dart';
-import '../../customer/views/signup_for_customer.dart';
+
 import '../widges/customer_store_choice.dart';
 
 class SupplierOrCustomer extends StatelessWidget {
@@ -20,28 +18,28 @@ class SupplierOrCustomer extends StatelessWidget {
       body: Background(
           child: Column(
         children: [
-          const Gap(200),
-          const Text(
+          Gap(ScreenUtil().setHeight(200)),
+          Text(
             'Choose your type',
-            style: TextStyle(fontSize: 35),
+            style: TextStyle(fontSize: 30.sp),
           ),
-          const Gap(60),
+          Gap(ScreenUtil().setHeight(60)),
           CustomerStoreChoice(),
-          const Gap(40),
-          Button(
-            text: 'Next',
-            tap: () {
-              print(CustomerStoreChoice().customerNavigate);
-              CustomerStoreChoice().customerNavigate == true
-                  ? null
-                  : Navigator.pushNamed(context, SignUpForCustomer.id);
-            },
-            width: 180.w,
-            colorBtn: kPrimaryColor,
-            colorTxt: kSecondaryColor,
-            height: 60,
-            textSize: 25,
-          )
+          Gap(ScreenUtil().setHeight(60)),
+          // Button(
+          //   text: 'Next',
+          //   tap: () {
+          //     print(CustomerStoreChoice().customerNavigate);
+          //     CustomerStoreChoice().customerNavigate == true
+          //         ? null
+          //         : Navigator.pushNamed(context, SignUpForSupplier.id);
+          //   },
+          //   width: 180.w,
+          //   colorBtn: kPrimaryColor,
+          //   colorTxt: kSecondaryColor,
+          //   height: 60,
+          //   textSize: 25,
+          // )
         ],
       )),
     );

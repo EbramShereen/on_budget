@@ -64,7 +64,7 @@ class _SignupTextFieldForSupplierState
                   return null;
                 },
               ),
-              Gap(ScreenUtil().setWidth(20)),
+              Gap(ScreenUtil().setWidth(10)),
               //last name
               TextFormFieldWidget(
                 controller: widget.lastNameController,

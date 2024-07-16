@@ -49,12 +49,6 @@ class _ShowAddressesState extends State<ShowAddresses> {
             const Gap(20),
             const AddressCard(),
             const Gap(25),
-            const AddressCard(),
-            const Gap(25),
-            const AddressCard(),
-            const Gap(25),
-            const AddressCard(),
-            const Gap(25),
             SetDefaultAddress(
               switch_: switch_,
               onChanged: (p0) {

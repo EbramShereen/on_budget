@@ -17,53 +17,61 @@ class GetProfileSections {
     return [
       ProfileSections(
           icon: Icons.notifications_none,
+          context,
           text: 'Notifications',
           onTap: () => Navigator.pushNamed(context, EmptyNotification.id)),
       ProfileSections(
           icon: Icons.discount,
+          context,
           text: 'Copouns',
           onTap: () => Navigator.pushNamed(context, EmptyCoupon.id)),
       ProfileSections(
           icon: Icons.receipt,
+          context,
           text: 'My orders',
           onTap: () => Navigator.pushNamed(context, EmptyOrders.id)),
       ProfileSections(
           icon: Icons.near_me,
+          context,
           text: 'Addresses',
           onTap: () => Navigator.pushNamed(context, ShowAddresses.id)),
-      ProfileSections(icon: Icons.payment, text: 'Payment', onTap: () {}),
+      ProfileSections(
+        icon: Icons.payment,
+        context,
+        text: 'Payment',
+        onTap: () {},
+      ),
       ProfileSections(
           icon: Icons.favorite_border,
+          context,
           text: 'Wishlist',
           onTap: () => Navigator.pushNamed(context, EmptyWishlist.id)),
-      ProfileSections(
-          icon: Icons.login_outlined,
-          text: 'Logout',
+      ProfileSections(icon: Icons.login_outlined, context, text: 'Logout',
           onTap: () {
-            showDialogWidget(
-              context,
-              firstTitle: 'Are you sure',
-              secondTitle: 'you want to logout?',
-              firstTap: () => Navigator.pop(context),
-              secondTap: () => Navigator.pushNamed(context, Login.id),
-              firstButtonText: 'Cancel',
-              secondButtonText: 'Sure',
-            );
-          }),
+        showDialogWidget(
+          context,
+          firstTitle: 'Are you sure',
+          secondTitle: 'you want to logout?',
+          firstTap: () => Navigator.pop(context),
+          secondTap: () => Navigator.pushNamed(context, Login.id),
+          firstButtonText: 'Cancel',
+          secondButtonText: 'Sure',
+        );
+      }),
       ProfileSections(
           icon: Icons.person_remove_alt_1_outlined,
-          text: 'Delete Account',
-          onTap: () {
-            showDialogWidget(context,
-                firstTitle: 'Are you sure',
-                secondTitle: 'you want to delete your account?',
-                firstTap: () => Navigator.pop(context),
-                secondTap: () => Navigator.pushNamed(context, Login.id),
-                firstButtonText: 'Cancel',
-                secondButtonText: 'Delete',
-                firstTitleSize: 20,
-                secondTitleSize: 20);
-          }),
+          context,
+          text: 'Delete Account', onTap: () {
+        showDialogWidget(context,
+            firstTitle: 'Are you sure',
+            secondTitle: 'you want to delete your account?',
+            firstTap: () => Navigator.pop(context),
+            secondTap: () => Navigator.pushNamed(context, Login.id),
+            firstButtonText: 'Cancel',
+            secondButtonText: 'Delete',
+            firstTitleSize: 20,
+            secondTitleSize: 20);
+      }),
     ];
   }
 }

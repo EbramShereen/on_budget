@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:on_budget/src/logic/register/supplier/supplier_states.dart';
@@ -18,7 +20,7 @@ class SignUpForSupplier extends StatefulWidget {
 class _SignUpWithEmailState extends State<SignUpForSupplier> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return BlocProvider<SupplierCubit>(
       create: (context) => SupplierCubit(
           supplierRepository:
               SupplierRepository(supplierService: SupplierService())),
@@ -35,6 +37,7 @@ class _SignUpWithEmailState extends State<SignUpForSupplier> {
                 ),
               );
             } else if (state is SupplierFailure) {
+              log(state.exception.toString());
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(state.exception.toString()),

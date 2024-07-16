@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/src/utils/cart.dart';
+import 'package:on_budget/src/data/models/cart/cart_model.dart';
 import '../widgets/cart_product.dart';
-import '../../checkout/views/checkout_view.dart';
 import '../../../utils/components/background.dart';
 import '../../../utils/components/button.dart';
 import '../../../utils/components/leading_icon.dart';

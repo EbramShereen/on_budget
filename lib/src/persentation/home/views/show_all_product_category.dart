@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:on_budget/src/data/repository/home/categories/category_products_repository.dart';
 import 'package:on_budget/src/data/service/home/home_categories/category_product_service.dart';
 import 'package:on_budget/src/logic/home/home_category_cubit/Home_cubit.dart';
@@ -104,7 +105,10 @@ class _ShowAllProductsByCategoryState extends State<ShowAllProductsByCategory> {
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) {
                   final product = state.products[index];
-                  return ProductCard(product: product);
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10).r,
+                    child: ProductCard(product: product),
+                  );
                 },
               );
             } else if (state is HomeFailure) {

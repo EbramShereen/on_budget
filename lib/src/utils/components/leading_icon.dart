@@ -25,7 +25,7 @@ class LeadingIcon extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         vertical: vertical?.toDouble() ?? 0,
         horizontal: horizontal?.toDouble() ?? 0,
-      ),
+      ).r,
       child: IconButton(
           onPressed: onPressed ??
               () {

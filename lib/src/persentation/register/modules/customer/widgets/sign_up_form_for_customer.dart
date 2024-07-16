@@ -63,12 +63,17 @@ class SignUpFormforCustomer extends StatelessWidget {
                     customerFormkey.currentState!.save();
                     isValid = true;
                   }
+                  log(isValid.toString());
                   if (isValid) {
                     final cubit = context.read<CustomerCubit>();
                     final genderState = genderChoiceKey.currentState;
                     final isGenderSelected = genderState?.widget.gender;
                     final isConfirmPolicySelected =
                         confirmPolicykey.currentState?.checkBox ?? false;
+                    log(cubit.toString());
+                    log(genderState.toString());
+                    log(isGenderSelected.toString());
+                    log(isConfirmPolicySelected.toString());
                     if (isGenderSelected == null) {
                       showDialog(
                         context: context,

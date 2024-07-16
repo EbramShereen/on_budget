@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:on_budget/src/utils/components/button.dart';
 import 'package:on_budget/src/utils/components/failure_dialouge.dart';
 import 'package:on_budget/src/utils/components/waiting_progress_loader.dart';
-import 'package:on_budget/src/utils/helper/constants/colors.dart';
-import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
-import '../../../../home/views/home.dart';
 import '../../../../../data/repository/register/customer/customer_repository.dart';
 import '../../../../../data/service/register/customer/customer_service.dart';
 import '../../../../../logic/register/customer/customer_cubit.dart';

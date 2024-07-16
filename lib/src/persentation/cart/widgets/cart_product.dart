@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:on_budget/src/utils/cart.dart';
+import 'package:on_budget/src/data/models/cart/cart_model.dart';
 import '../../home/widgets/product_details/stars/five_stars.dart';
 import '../../../utils/helper/constants/colors.dart';
 
@@ -96,10 +96,10 @@ class CartProduct extends StatelessWidget {
               top: ScreenUtil().setHeight(50),
               child: IconButton(
                 style: ButtonStyle(
-                    iconSize: WidgetStatePropertyAll(20.r),
+                    iconSize: MaterialStatePropertyAll(20.r),
                     backgroundColor:
-                        const WidgetStatePropertyAll(kPrimaryColor),
-                    iconColor: const WidgetStatePropertyAll(kSecondaryColor)),
+                        const MaterialStatePropertyAll(kPrimaryColor),
+                    iconColor: const MaterialStatePropertyAll(kSecondaryColor)),
                 onPressed: () {},
                 icon: const Icon(
                   Icons.add,
@@ -119,18 +119,17 @@ class CartProduct extends StatelessWidget {
               top: ScreenUtil().setHeight(50),
               child: IconButton(
                 style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(
+                    backgroundColor: MaterialStatePropertyAll(
                       const Color(0xFFFE2121).withOpacity(.3),
                     ),
-                    iconSize: WidgetStatePropertyAll(20.r),
-                    iconColor: const WidgetStatePropertyAll(kSecondaryColor)),
+                    iconSize: MaterialStatePropertyAll(20.r),
+                    iconColor: const MaterialStatePropertyAll(kSecondaryColor)),
                 onPressed: () {},
                 icon: const Icon(
                   Icons.remove,
                 ),
               ),
             ),
-            
           ],
         ));
   }

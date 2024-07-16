@@ -21,7 +21,7 @@ class GenderChoiceState extends State<GenderChoice> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        StoreOrCustomer(
+        SupplierOrCustomer(
           image: kBoyIcon,
           tap: () => setState(() {
             isSelectMan = true;
@@ -34,7 +34,7 @@ class GenderChoiceState extends State<GenderChoice> {
           unSelectedRadius: 50,
         ),
         const Gap(45),
-        StoreOrCustomer(
+        SupplierOrCustomer(
           image: kGirlIcon,
           tap: () => setState(() {
             isSelectMan = false;

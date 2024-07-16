@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:on_budget/src/persentation/add_product/views/add_product.dart';
 import 'package:on_budget/src/persentation/home/views/show_all_product_category.dart';
+import 'package:on_budget/src/persentation/register/modules/supplier/views/signup_for_supplier.dart';
 import '../../../../persentation/cart/views/cart_view.dart';
-import '../../../../persentation/chatbot/views/chatbot.dart';
+import '../../../../persentation/chatbot/views/chatbot_view.dart';
 import '../../../../persentation/checkout/views/checkout_view.dart';
 import '../../../../persentation/home/views/products_details.dart';
 import '../../../../persentation/home/views/search.dart';
@@ -38,6 +39,7 @@ class Routes {
       EmailVerification.id: (context) => const EmailVerification(),
       SignupOptions.id: (context) => const SignupOptions(),
       SignUpForCustomer.id: (context) => const SignUpForCustomer(),
+      SignUpForSupplier.id: (context) => const SignUpForSupplier(),
       OnBoardingScreens.id: (context) => const OnBoardingScreens(),
       ForgetPassword.id: (context) => const ForgetPassword(),
       OnBoardingLanguage.id: (context) => const OnBoardingLanguage(),
@@ -53,7 +55,7 @@ class Routes {
       EmptyWishlist.id: (context) => const EmptyWishlist(),
       EditProfile.id: (context) => const EditProfile(),
       SearchScreen.id: (context) => const SearchScreen(),
-      CartView.id: (context) =>  CartView(),
+      CartView.id: (context) => const CartView(),
       ProductsDetails.id: (context) => const ProductsDetails(),
       CheckOutView.id: (context) => const CheckOutView(),
       AddProduct.id: (context) => const AddProduct(),

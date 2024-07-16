@@ -14,7 +14,7 @@ class SupplierModel {
       required this.password,
       required this.companyName});
 
-  factory SupplierModel.fromJson(Map<String, String> json) {
+factory SupplierModel.fromJson(Map<String, dynamic> json) {
     return SupplierModel(
       firstName: json['firstName']!,
       lastName: json['lastName']!,

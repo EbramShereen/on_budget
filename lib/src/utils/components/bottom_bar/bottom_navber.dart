@@ -3,7 +3,7 @@ import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_not
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:on_budget/src/persentation/chatbot/views/chatbot.dart';
+import 'package:on_budget/src/chabot.dart';
 import 'package:on_budget/src/persentation/generate_images/views/generate_t-shirt.dart';
 import 'package:on_budget/src/persentation/home/views/home.dart';
 import 'package:on_budget/src/persentation/home/views/search.dart';
@@ -29,31 +29,31 @@ class CustomBottomNavBar extends StatelessWidget {
       case 0:
         currentIndex = 0;
         if (currentIndex != lastIndex) {
-          // Navigator.pushNamed(context, Home.id);
+          Navigator.pushReplacementNamed(context, HomeView.id);
         }
-
         break;
       case 1:
         currentIndex = 1;
         if (currentIndex != lastIndex) {
-          Navigator.pushNamed(context, SearchScreen.id);
+          Navigator.pushReplacementNamed(context, SearchScreen.id);
         }
         break;
       case 2:
         currentIndex = 2;
         if (currentIndex != lastIndex) {
-          Navigator.pushNamed(context, ChatBotView.id);
+          Navigator.pushReplacementNamed(context, ChatBot.id);
         }
+        break;
       case 3:
         currentIndex = 3;
         if (currentIndex != lastIndex) {
-          Navigator.pushNamed(context, GenerateTshirt.id);
+          Navigator.pushReplacementNamed(context, GenerateTshirt.id);
         }
         break;
       case 4:
         currentIndex = 4;
         if (currentIndex != lastIndex) {
-          Navigator.pushNamed(context, ProfileScreen.id);
+          Navigator.pushReplacementNamed(context, ProfileScreen.id);
         }
         break;
     }
@@ -84,9 +84,7 @@ class CustomBottomNavBar extends StatelessWidget {
               itemLabel: 'Search',
             ),
             BottomBarItem(
-              inActiveItem: SvgPicture.asset(
-                kGeminiSparkleInActive,
-              ),
+              inActiveItem: SvgPicture.asset(kGeminiSparkleInActive),
               activeItem: SvgPicture.asset(kGeminiSparkleActive),
               itemLabel: 'Tips',
             ),

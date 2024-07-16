@@ -1,8 +1,8 @@
-// user_message.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:on_budget/src/utils/helper/constants/api.dart';
+import 'package:on_budget/src/utils/helper/constants/images.dart';
 
 class UserMessage extends StatelessWidget {
   const UserMessage({
@@ -47,8 +47,8 @@ class UserMessage extends StatelessWidget {
                 ),
               ),
               Gap(ScreenUtil().setWidth(10)),
-              CircleAvatar(
-                backgroundImage: AssetImage(ChatbotApi().kChatBot),
+              const CircleAvatar(
+                backgroundImage: AssetImage(kBoyIcon),
                 backgroundColor: Colors.transparent,
               ),
             ],

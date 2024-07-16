@@ -34,86 +34,88 @@ class _SignupOptionsState extends State<SignupOptions> {
           padding: const EdgeInsets.symmetric(
             horizontal: 10,
             vertical: 20,
-          ),
+          ).r,
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: kSecondaryColor,
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(20),
-              ),
+              ).w,
             ),
             child: Column(
               children: [
-                const Gap(80),
-                const Text(
+                Gap(ScreenUtil().setHeight(70)),
+                Text(
                   'Please select a preferred',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+                  style:
+                      TextStyle(fontSize: 25.sp, fontWeight: FontWeight.w400),
                 ),
-                const Text(
+                Text(
                   'option of your choice. ',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+                  style:
+                      TextStyle(fontSize: 25.sp, fontWeight: FontWeight.w400),
                 ),
-                const Gap(40),
+                Gap(ScreenUtil().setHeight(20)),
                 Button(
                     colorTxt: kSecondaryColor,
                     colorBtn: kPrimaryColor,
                     width: 100.w,
-                    height: 60,
-                    textSize: 25,
+                    height: 60.h,
+                    textSize: 25.sp,
                     text: 'Email',
                     tap: () =>
                         Navigator.pushNamed(context, SupplierOrCustomer.id)),
-                const Gap(50),
+                Gap(ScreenUtil().setHeight(50)),
                 Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20).r,
                     child: TextDivider.horizontal(
-                      text: const Text(
+                      text: Text(
                         'Or Continue With',
-                        style: TextStyle(color: kHintColor, fontSize: 15),
+                        style: TextStyle(color: kHintColor, fontSize: 15.sp),
                       ),
                       thickness: .9,
                     )),
-                const Gap(50),
+                Gap(ScreenUtil().setHeight(50)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SignupWithSocial(
                       imageurl: kFacebookIcon,
-                      width: 75.w,
-                      height: 75,
+                      width: 65.w,
+                      height: 65.h,
                       tap: () {},
                     ),
-                    const Gap(20),
+                    Gap(ScreenUtil().setWidth(20)),
                     SignupWithSocial(
                       imageurl: Platform.isAndroid ? kGoogleIcon : kAppleIcon,
-                      width: 75.w,
-                      height: 75,
+                      width: 65.w,
+                      height: 65.h,
                       tap: () async {
                         signInWithGoogle();
                       },
                     ),
-                    const Gap(20),
+                    Gap(ScreenUtil().setWidth(20)),
                     SignupWithSocial(
                       imageurl: kXIcon,
-                      width: 75.w,
-                      height: 75,
+                      width: 65.w,
+                      height: 65.h,
                       tap: () {},
                     ),
                   ],
                 ),
-                const Gap(50),
+                Gap(ScreenUtil().setHeight(50)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       'Already have an account?',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.w600,
                         color: kPrimaryColor,
                       ),
                     ),
-                    const Gap(10),
+                    Gap(ScreenUtil().setWidth(10)),
                     GestureDetector(
                       onTap: () => Navigator.push(
                           context,
@@ -130,18 +132,18 @@ class _SignupOptionsState extends State<SignupOptions> {
                     ),
                   ],
                 ),
-                const Gap(30),
+                Gap(ScreenUtil().setHeight(20)),
                 const Divider(
                   thickness: 1,
-                  indent: 150,
-                  endIndent: 150,
+                  indent: 100,
+                  endIndent: 100,
                 ),
-                const Gap(20),
-                const Text(
+                Gap(ScreenUtil().setHeight(20)),
+                Text(
                   'Our Terms of Use & Privacy Policy.',
                   style: TextStyle(
-                      fontSize: 15,
-                      color: Color(0xFF1C2340),
+                      fontSize: 15.sp,
+                      color: const Color(0xFF1C2340),
                       fontWeight: FontWeight.w600),
                 ),
               ],

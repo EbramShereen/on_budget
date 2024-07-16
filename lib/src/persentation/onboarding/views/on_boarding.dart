@@ -47,7 +47,7 @@ class OnBoardingScreens extends StatelessWidget {
             //for more info. go to main.dart
             onPressed: () => Navigator.pushNamed(context, SignupOptions.id),
             style: const ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll(kPrimaryColor),
+              backgroundColor: MaterialStatePropertyAll(kPrimaryColor),
             ),
             child: const Text(
               'Skip',
@@ -61,7 +61,7 @@ class OnBoardingScreens extends StatelessWidget {
             //for more info. go to main.dart
             onPressed: () => Navigator.pushNamed(context, Login.id),
             style: const ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll(kPrimaryColor),
+              backgroundColor: MaterialStatePropertyAll(kPrimaryColor),
             ),
             child: const Text(
               'Login',
@@ -103,7 +103,6 @@ class OnBoardingScreens extends StatelessWidget {
           CustomOnBoarding(
             textOne: 'Sign up now for',
             textTwo: 'tailored shopping',
-            
           ),
         ],
       ),

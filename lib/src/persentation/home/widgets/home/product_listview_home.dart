@@ -16,7 +16,7 @@ class ProductsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 220.h,
+      height: 240.h,
       child: BlocProvider(
         create: (context) => HomeCubit(
             category: categoryUrl,
@@ -32,10 +32,13 @@ class ProductsListView extends StatelessWidget {
               );
             } else if (state is HomeLoaded) {
               return ListView.builder(
-                itemCount: state.products.length,
+                itemCount: 5,
                 itemBuilder: (context, index) {
                   final product = state.products[index];
-                  return ProductCard(product: product);
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 10).r,
+                    child: ProductCard(product: product),
+                  );
                 },
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,

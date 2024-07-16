@@ -21,6 +21,5 @@ class ChatBotSuccess extends ChatBotState {
 class ChatBotError extends ChatBotState {
   final String error;
 
-  ChatBotError(List<ChatBotModel> messagesList, this.error)
-      : super(messagesList);
+  ChatBotError(List<ChatBotModel> messagesList, this.error) : super(messagesList);
 }

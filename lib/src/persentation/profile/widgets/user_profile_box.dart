@@ -12,55 +12,58 @@ class UserProfileBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: kSecondaryColor,
-        borderRadius: BorderRadius.all(
-          Radius.circular(20),
-        ),
-      ),
-      width: 400.w,
-      height: 180,
-      child: Stack(
-        children: [
-          //profile picture
-          const Positioned(
-            top: 20,
-            left: 150,
-            child: CircleAvatar(
-              radius: 50,
-              child: Image(
-                image: AssetImage(kBoyIcon),
-              ),
-            ),
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        decoration: const BoxDecoration(
+          color: kSecondaryColor,
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
           ),
-
-          //edit profile picture icon
-          Positioned(
-            top: 80,
-            right: 140,
-            child: CircleAvatar(
-              backgroundColor: kPrimaryColor,
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.edit,
-                  color: kThirdColor,
+        ),
+        width: 400.w,
+        height: 180.h,
+        child: Stack(
+          children: [
+            //profile picture
+            Positioned(
+              top: ScreenUtil().setHeight(20),
+              left: ScreenUtil().setWidth(120),
+              child: CircleAvatar(
+                radius: 50.r,
+                child: const Image(
+                  image: AssetImage(kBoyIcon),
                 ),
               ),
             ),
-          ),
 
-          //full name
-          const Positioned(
-            top: 130,
-            left: 120,
-            child: Text(
-              'Ebram Shereen',
-              style: TextStyle(fontSize: 25),
+            //edit profile picture icon
+            Positioned(
+              top: ScreenUtil().setHeight(90),
+              left: ScreenUtil().setWidth(120),
+              child: CircleAvatar(
+                backgroundColor: kPrimaryColor,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.edit,
+                    color: kThirdColor,
+                  ),
+                ),
+              ),
             ),
-          ),
-        ],
+
+            //full name
+            Positioned(
+              top: ScreenUtil().setHeight(140),
+              left: ScreenUtil().setWidth(105),
+              child: Text(
+                'Ebram Shereen',
+                style: TextStyle(fontSize: 25.sp),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

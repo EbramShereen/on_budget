@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:on_budget/src/utils/helper/constants/colors.dart';
 
 class TextFormFieldWidget extends StatelessWidget {
   const TextFormFieldWidget({
@@ -41,31 +42,40 @@ class TextFormFieldWidget extends StatelessWidget {
               bottom: paddingbottom ?? 20)
           .r,
       child: SizedBox(
-        height: height ?? 50.h,
+        height: height ?? 60.h,
         width: width ?? 400.w,
         child: TextFormField(
           controller: controller,
           decoration: InputDecoration(
+            errorMaxLines: 2,
+            errorStyle: TextStyle(fontSize: 12.sp),
             suffix: suffixIcon,
             border: OutlineInputBorder(
               borderRadius: const BorderRadius.all(
                 Radius.circular(10),
               ).w,
             ),
-            enabledBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(10),
-              ),
+              ).w,
+              gapPadding: 4.r,
             ),
-            disabledBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(
+            enabledBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(10),
-              ),
+              ).w,
             ),
-            errorBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(
+            disabledBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(10),
-              ),
+              ).w,
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(
+                Radius.circular(10),
+              ).w,
+              gapPadding: 4.r,
             ),
             labelText: labelText,
           ),

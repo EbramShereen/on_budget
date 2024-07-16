@@ -35,7 +35,7 @@ class _LoginformState extends State<Loginform> {
               ).r,
             ),
             width: 350.w,
-            height: 450.h,
+            height: 350.h,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: Column(
@@ -77,9 +77,9 @@ class _LoginformState extends State<Loginform> {
                         ),
                       ),
                       Gap(ScreenUtil().setHeight(10)),
-                      CustomerOrSupplierLogin(
-                        key: customerOrSupplierKey,
-                      ),
+                      // CustomerOrSupplierLogin(
+                      //   key: customerOrSupplierKey,
+                      // ),
                       Gap(ScreenUtil().setHeight(10)),
                       RememberMeLogin(),
                       Gap(ScreenUtil().setHeight(10)),

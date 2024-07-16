@@ -6,7 +6,7 @@ import '../../../utils/helper/constants/colors.dart';
 
 // ignore: must_be_immutable
 class ProfileSections extends StatelessWidget {
-  ProfileSections(
+  ProfileSections(BuildContext context,
       {super.key, required this.icon, required this.text, required this.onTap});
   //this class for profile sections like notifications, coupons , etc.
 
@@ -25,12 +25,12 @@ class ProfileSections extends StatelessWidget {
         onTap: onTap,
         child: Row(
           children: [
-            const Gap(30),
+            Gap(ScreenUtil().setWidth(20)),
             //icon for the section
             Icon(
               icon,
               color: kPrimaryColor,
-              size: 40,
+              size: 40.r,
             ),
 
             SizedBox(width: 10.w),
@@ -38,7 +38,7 @@ class ProfileSections extends StatelessWidget {
             Expanded(
               child: Text(
                 text,
-                style: const TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20.sp),
               ),
             ),
             //to put the arrow in the end of row
@@ -48,7 +48,7 @@ class ProfileSections extends StatelessWidget {
               Icons.arrow_forward_ios_rounded,
               color: kPrimaryColor,
             ),
-            const Gap(30)
+            Gap(ScreenUtil().setWidth(30)),
           ],
         ),
       ),

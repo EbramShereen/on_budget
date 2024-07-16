@@ -9,8 +9,10 @@ class SupplierWaiting extends SupplierStates {}
 
 class SupplierSuccess extends SupplierStates {
   SupplierModel supplierModel;
+  String email;
   SupplierSuccess({
     required this.supplierModel,
+    required this.email,
   });
 }
 

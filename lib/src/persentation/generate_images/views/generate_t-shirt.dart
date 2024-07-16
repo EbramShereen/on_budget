@@ -31,7 +31,7 @@ class _GenerateTshirtState extends State<GenerateTshirt> {
   String? errorMessage;
   ScrollController scrollController = ScrollController();
 
-  final int _currentIndex = 3;
+  final int currentIndex = 3;
 
   int lastIndex = 3;
 
@@ -177,9 +177,9 @@ class _GenerateTshirtState extends State<GenerateTshirt> {
           elevation: 0,
           height: 100,
           child: CustomBottomNavBar(
-            currentIndex: 2,
+            currentIndex: currentIndex,
             controller: scrollController,
-            lastIndex: 2,
+            lastIndex: lastIndex,
           ),
         ),
       ),

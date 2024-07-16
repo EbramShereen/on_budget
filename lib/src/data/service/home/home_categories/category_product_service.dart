@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:http/http.dart' as http;
 
 class CategoryProductsService {
@@ -9,6 +10,7 @@ class CategoryProductsService {
       Uri.parse(url),
       headers: {'Accept': 'application/json'},
     );
+    log(response.statusCode.toString());
     if (response.statusCode == 200) {
       final jsonResponse = json.decode(response.body);
       return jsonResponse;
